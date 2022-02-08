@@ -6,7 +6,11 @@ from tinymce.models import HTMLField
 # Create your models here.
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
+
 class Post(models.Model):
+    """
+    The class based model for the post function of the forum
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -21,10 +25,16 @@ class Post(models.Model):
         User, related_name='forum_post_like', blank=True)
 
     class Meta:
+        """
+        Class to order the newest post created to apper first
+        """
         ordering = ['-created_on']
 
     def __str__(self):
         return self.title
 
     def number_of_likes(self):
+        """
+        Counting and returning the numer of likes a post has
+        """
         return self.likes.count()
