@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,35 +10,81 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- Font Awsome Link-->
+    <script src="https://kit.fontawesome.com/a1bd5fe01f.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+
     <title>Cosmos</title>
   </head>
   <body>
-    <header>COSMOS</header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">Navbar</a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <!-- Header with navbar -->
+    <header>
+      <!-- Main navbar -->
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">COSMOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New Releases</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Music Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Afro</a></li>
+                    <li><a class="dropdown-item" href="#">Blues</a></li>
+                    <li><a class="dropdown-item" href="#">Christmas</a></li>
+                    <li><a class="dropdown-item" href="#">Classic</a></li>
+                    <li><a class="dropdown-item" href="#">Country</a></li>
+                    <li><a class="dropdown-item" href="#">Disco</a></li>
+                    <li><a class="dropdown-item" href="#">EDM</a></li>
+                    <li><a class="dropdown-item" href="#">Folk</a></li>
+                    <li><a class="dropdown-item" href="#">Funk</a></li>
+                    <li><a class="dropdown-item" href="#">HipHop</a></li>
+                    <li><a class="dropdown-item" href="#">Indie</a></li>
+                    <li><a class="dropdown-item" href="#">Jazz</a></li>
+                    <li><a class="dropdown-item" href="#">K-Pop</a></li>
+                    <li><a class="dropdown-item" href="#">Latino</a></li>
+                    <li><a class="dropdown-item" href="#">Metal</a></li>
+                    <li><a class="dropdown-item" href="#">Pop</a></li>
+                    <li><a class="dropdown-item" href="#">Punk</a></li>
+                    <li><a class="dropdown-item" href="#">Rap</a></li>
+                    <li><a class="dropdown-item" href="#">Reggae</a></li>
+                    <li><a class="dropdown-item" href="#">RnB</a></li>
+                    <li><a class="dropdown-item" href="#">Rock</a></li>
+                    <li><a class="dropdown-item" href="#">Soul</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Album Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Music Video</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sign Up</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+    </header>
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
@@ -44,9 +92,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="card mt-auto py-3 dark-bg">
-        <p class="m-0 text-center">Footer test</p>
-        <p class="m-0 text-center">Follow us:</p>
+    <footer class="container-fluid fixed-bottom">
+      <div class="row justify-content-between">
+        <div class="col-5">
+          <div id="logo">
+            <a class="navbar-brand" href="{% url 'home' %}">COSMOS</a>
+        </div>
+        <div class="col-7">
+          <div id="footer-icons">
+            <i class="fab fa-spotify"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-soundcloud"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
