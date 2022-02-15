@@ -8,9 +8,17 @@
         <!-- Detail blog post -->
         <div class="col-sm-8">
             <h1>{{ post.title }}</h1>
-            <p>By: {{ post.author }}</p>
-            <hr>
-            <div>{{ post.content }}</div>
+            <p>By: {{ post.author }} - {{ post.created_on}}</p>
+        </div>
+        <div class="col-sm-8">
+            {% if "placeholder" in post.image.url %}
+                <p>Coming soon</p>
+            {% else %}
+                <img src="{{ post.image.url }}" alt="" width="100%">
+            {% endif %}
+        </div>
+        <div class="col-sm-8">
+            {{ post.content }}
         </div>
         <br>
         <div class="row">
