@@ -13,11 +13,16 @@
             <div>{{ post.content }}</div>
         </div>
         <br>
-        <div class="col-6">
-            <a class="btn btn-outline-dark btn-sm" href="{% url 'home' %}" role="button">Back</a>
-        </div>
-        <div class="col-6">
-            <a class="btn btn-outline-dark btn-sm" href="{% url 'edit-post' post.pk %}" role="button">Edit</a>
+        <div class="row">
+            <div class="col-4">
+                <a class="btn btn-outline-dark btn-sm" href="{% url 'home' %}" role="button">Back</a>
+            </div>
+            <div class="col-4">
+                <a class="btn btn-outline-dark btn-sm" href="{% url 'edit-post' post.pk %}" role="button">Edit</a>
+            </div>
+            <div class="col-4">
+                <a class="btn btn-outline-dark btn-sm" href="{% url 'delete-post' post.pk %}" role="button">Delet</a>
+            </div>
         </div>
 
     </div>

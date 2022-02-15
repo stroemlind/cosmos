@@ -11,7 +11,9 @@
             <li>
                 <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
                 <hr>
-                By: {{ post.author }} - <a href="{% url 'edit-post' post.pk %}">Edit</a>
+                By: {{ post.author }} - 
+                <a href="{% url 'edit-post' post.pk %}">Edit</a>
+                <a href="{% url 'delete-post' post.pk %}">Delete</a>
                 <hr>
                 {{ post.content }}
             </li>
