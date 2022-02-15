@@ -6,13 +6,17 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
+        <ul>
         {% for post in post_list %}
-            {{ post.title }}
-            <hr>
-            {{ post.author }}
-            <hr>
-            {{ post.content }}
+            <li>
+                <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
+                <hr>
+                {{ post.author }}
+                <hr>
+                {{ post.content }}
+            </li>
         {% endfor %}
+        </ul>
 
     </div>
 </div>
