@@ -12,9 +12,19 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
 
+
 class PostDetailView(generic.DetailView):
     """
     The class to display the post in detail
     """
     model = Post
     template_name = 'post_detail.html'
+
+
+class AddPost(generic.CreateView):
+    """
+    The class to display text editor for users to create post
+    """
+    model = Post
+    template_name = 'add_post.html'
+    fields = ('title', 'author', 'image', 'content', 'status')

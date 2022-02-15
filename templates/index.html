@@ -11,7 +11,7 @@
             <li>
                 <a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a>
                 <hr>
-                {{ post.author }}
+                By: {{ post.author }}
                 <hr>
                 {{ post.content }}
             </li>

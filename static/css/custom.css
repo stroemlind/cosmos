@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Montserrat+Subrayada&family=Quicksand:wght@300;400&display=swap');
+/*Imported fonts from Google Fonts:
+font-family: 'Modak', cursive;
+font-family: 'Montserrat Subrayada', sans-serif;
+font-family: 'Quicksand', sans-serif;*/
+
 footer {
     min-height: 120px;
     background-color: aqua;

@@ -5,13 +5,17 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- DEtail blog post -->
-        <h1>{{ post.title }}</h1>
-        <p>By: {{ post.author }}</p>
-        <hr>
-        <div>{{ post.content }}</div>
+        <!-- Detail blog post -->
+        <div class="col-sm-8">
+            <h1>{{ post.title }}</h1>
+            <p>By: {{ post.author }}</p>
+            <hr>
+            <div>{{ post.content }}</div>
+        </div>
         <br>
-        <a href="{% url 'home' %}">Back</a>
+        <div class="col-6">
+            <a class="btn btn-outline-dark btn-sm" href="{% url 'home' %}" role="button">Back</a>
+        </div>
 
     </div>
 </div>
