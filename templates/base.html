@@ -17,7 +17,7 @@
     <script src="https://cdn.tiny.cloud/1/czpfitxtftdn1ly3oh77xoqg1y8m4uob7grcc1kumtp6tri8/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
     <!-- Custom CSS stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
     <title>Cosmos</title>
   </head>
@@ -98,23 +98,20 @@
     </main>
 
     <!-- Footer -->
-   <footer class="container-fluid">
-      <div class="row justify-content-between">
-        <div class="col-5">
-          <div>
-            <a class="navbar-brand logo" href="{% url 'home' %}">COSMOS</a>
-        </div>
-        <div class="col-7">
-          <div id="footer-icons">
-            <i class="fab fa-spotify"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-soundcloud"></i>
-            <i class="fab fa-youtube"></i>
+    <footer class="text-center">
+        <div class="container pt-4">
+          <div class="mb-4">
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.spotify.com/" target="_blank" rel="noopener" aria-label="Visit our Spotify (open in new tab)"><i class="fab fa-spotify"></i></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook (open in new tab)"><i class="fab fa-facebook"></i></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter (open in new tab)"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram (open in new tab)"><i class="fab fa-instagram"></i></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://soundcloud.com/" target="_blank" rel="noopener" aria-label="Visit our Soundcloud (open in new tab)"><i class="fab fa-soundcloud"></i></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Visit our YouTube (open in new tab)"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
-      </div>
+          <div class="text-center p-3">
+            <a class="navbar-brand logo text-dark" href="{% url 'home' %}">COSMOS</a>
+          </div>
     </footer>
 
     <!-- TinyMCE script -->
