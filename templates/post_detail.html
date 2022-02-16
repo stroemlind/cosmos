@@ -6,17 +6,18 @@
     <div class="row">
 
         <!-- Detail blog post -->
-        <div class="col-sm-8">
-            <h1>{{ post.title }}</h1>
-            <p>By: {{ post.author }} - {{ post.created_on}}</p>
-        </div>
-        <div class="col-sm-8">
+        <div class="col-sm-2">
             {% if "placeholder" in post.image.url %}
-                <p>Coming soon</p>
+            <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="img-fluid rounded-start" alt="Images of text logo with a background of space">
             {% else %}
                 <img src="{{ post.image.url }}" alt="" width="100%">
             {% endif %}
         </div>
+        <div class="col-sm-8">
+            <h1>{{ post.title }}</h1>
+            <p>By: {{ post.author }} - {{ post.created_on}}</p>
+        </div>
+        
         <div class="col-sm-8">
             {{ post.content|safe }}
         </div>

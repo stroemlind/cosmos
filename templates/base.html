@@ -28,7 +28,7 @@
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">COSMOS</a>
+            <a class="navbar-brand logo" href="{% url 'home' %}">COSMOS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -91,7 +91,7 @@
         </nav>
       </div>
     </header>
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -101,8 +101,8 @@
    <footer class="container-fluid">
       <div class="row justify-content-between">
         <div class="col-5">
-          <div id="logo">
-            <a class="navbar-brand" href="{% url 'home' %}">COSMOS</a>
+          <div>
+            <a class="navbar-brand logo" href="{% url 'home' %}">COSMOS</a>
         </div>
         <div class="col-7">
           <div id="footer-icons">
