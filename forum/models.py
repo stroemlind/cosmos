@@ -13,11 +13,41 @@ class Post(models.Model):
     """
     The class based model for the post function of the forum
     """
+    # Category choices
+    CATEGORIES = [
+        ('New Releases', 'New Releases'),
+        ('Album Review', 'Album Review'),
+        ('Music Video', 'Music Video'),
+        ('Afro', 'Afro'),
+        ('Blues', 'Blues'),
+        ('Christmas', 'Christmas'),
+        ('Classic', 'Classic'),
+        ('Country', 'Country'),
+        ('Disco', 'Disco'),
+        ('EDM', 'EDM'),
+        ('Folk', 'Folk'),
+        ('Funk', 'Funk'),
+        ('HipHop', 'HipHop'),
+        ('Indie', 'Indie'),
+        ('Jazz', 'Jazz'),
+        ('K-Pop', 'K-Pop'),
+        ('Latino', 'Latino'),
+        ('Metal', 'Metal'),
+        ('Pop', 'Pop'),
+        ('Punk', 'Punk'),
+        ('Rap', 'Rap'),
+        ('Reggae', 'Reggae'),
+        ('RnB', 'RnB'),
+        ('Rock', 'Rock'),
+        ('Soul', 'Soul'),
+    ]
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='forum_posts'
     )
+    category = models.CharField(choices=CATEGORIES, max_length=40, default='none')
     image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
     content = HTMLField()
