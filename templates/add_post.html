@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <h1>Create your post</h1>
 
-    <form action="" method="POST">
+    <form action="{% url 'add-post' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}  
         <button type="submit" class="btn btn-outline-dark">Share</button> 
