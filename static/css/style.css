@@ -5,6 +5,7 @@ font-family: 'Montserrat Subrayada', sans-serif;
 font-family: 'Quicksand', sans-serif;*/
 
 body {
+    background-image: linear-gradient(to left bottom, #1e164b, #241a55, #2a1e5f, #302269, #362673, #3c3282, #423e91, #474aa1, #4c60b8, #5277cf, #588ee5, #5fa5fb);
     background-color: lavender;
     font-family: 'Quicksand', sans-serif;
 }
@@ -12,28 +13,76 @@ body {
 img {
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 
 .logo {
     font-family: 'Modak', cursive;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .post-title {
     font-family: 'Montserrat Subrayada', sans-serif;
-}
-
-footer {
-    min-height: 120px;
-    background-color: aqua;
-}
-
-a {
-    font-size: 50px;
     text-decoration: none;
     color: black;
 }
 
+.padd-round {
+    padding: 5px;
+}
+
+/* Navbar styles */
+nav li {
+    font-size: 20px;
+}
+
+#main-nav a {
+    color: #fff;
+}
+
+#category-nav {
+    min-height: 40px;
+    margin-bottom: 10px;
+}
+
+#category-nav li {
+    font-size: 15px;
+}
+
+.nav-bg {
+    color: #fff;
+}
+
+#category-nav a {
+    color: #0A042A;
+}
+
+/* Footer styles */
+footer {
+    min-height: 120px;
+}
+
+footer a {
+    font-size: 50px;
+    text-decoration: none;
+}
+
 #footer-icons i {
     font-size: 30px;
+}
+
+/* Post detail styles */
+#title-post {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: #fff;
+}
+
+#crud-btn {
+    margin: 10px auto;
+}
+
+#crud-btn a {
+    text-decoration: none;
+    color: #0A042A;
+    margin: 5px;
 }
