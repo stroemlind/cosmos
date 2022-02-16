@@ -73,3 +73,25 @@ class Post(models.Model):
         Counting and returning the numer of likes a post has
         """
         return self.likes.count()
+
+
+class Comment(models.Model):
+    """
+    The class based model for Comments on the forums post
+    """
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                            related_name='forum_comment')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                             related_name='comments')
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        """
+        Class to order the oldest post created to apper first
+        """
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f'Comment: {self.body} By: {self.user}'
