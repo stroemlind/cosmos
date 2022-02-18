@@ -16,14 +16,9 @@ class PostList(generic.ListView):
     paginate_by = 12
 
 
-#class PostDetailView(generic.DetailView):
-    #model = Post
-    #template_name = 'post_detail.html'
-
-
 def get_post(request, pk):
     """
-    Function to se a post in detail
+    Function to view a post in detail
     """
     post = get_object_or_404(Post, pk=pk)
     template = 'post_detail.html'
@@ -32,13 +27,14 @@ def get_post(request, pk):
     }
     return render(request, template, context)
 
-# class AddPost(generic.CreateView):
-    # """
-    # The class to display text editor for users to create post
-    # """
-    # model = Post
-    # form_class = PostForm
-    # template_name = 'add_post.html'
+
+def category_page(request, categories):
+    """
+    Function to view each category on its own page
+    """
+    category_posts = Post.objects.filter(category=categories)
+    template = 'category.html'
+    return render(request, template, {'categories': categories, 'category_posts': category_posts})
 
 
 def add_post(request):

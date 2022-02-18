@@ -1,5 +1,12 @@
 from django import forms
-from .models import Post
+from .models import Post, Category
+
+choices = Category.objects.all().values_list('category_name', 'category_name')
+
+choice_list = []
+
+for choice in choices:
+    choice_list.append(choice)
 
 
 class PostForm(forms.ModelForm):
@@ -18,6 +25,6 @@ class PostForm(forms.ModelForm):
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
             'image': forms.FileInput(attrs={'class': 'form-control'}),
-            'category': forms.Select(attrs={'class': 'form-control'}),
+            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'})
         }
