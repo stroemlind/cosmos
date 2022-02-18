@@ -59,6 +59,7 @@ nav li {
 
 /* Footer styles */
 footer {
+    margin-top: auto;
     min-height: 120px;
 }
 
@@ -77,9 +78,6 @@ footer a {
     color: #fff;
 }
 
-#cat-link a {
-    text-decoration: none;
-}
 
 /* Buttons */
 
