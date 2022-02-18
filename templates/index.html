@@ -10,9 +10,13 @@
             <div class="row g-0">
                 <div class="col-md-2 col-sm-3">
                     {% if "placeholder" in post.image.url %}
+                    <a href="{% url 'post-detail' post.pk %}">
                         <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="img-fluid rounded-start" alt="Images of text logo with a background of space">
+                    </a>
                     {% else %}
+                    <a href="{% url 'post-detail' post.pk %}">
                         <img src="{{ post.image.url }}" alt="" width="100%">
+                    </a>
                     {% endif %} 
                 </div>
                 <div class="col-md-10 col-sm-9">
