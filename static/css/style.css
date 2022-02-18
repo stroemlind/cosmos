@@ -77,6 +77,8 @@ footer a {
     color: #fff;
 }
 
+/* Buttons */
+
 #crud-btn {
     margin: 10px auto;
 }
@@ -85,4 +87,9 @@ footer a {
     text-decoration: none;
     color: #0A042A;
     margin: 5px;
+}
+
+#page-btn a {
+    color: #1e164b;
+    text-decoration: none;
 }
