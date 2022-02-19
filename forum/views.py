@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .models import Post
+from .models import Post, Category
 from .forms import PostForm
 
 # Create your views here.
@@ -34,7 +34,10 @@ def category_page(request, categories):
     """
     category_posts = Post.objects.filter(category=categories)
     template = 'category.html'
-    return render(request, template, {'categories': categories, 'category_posts': category_posts})
+    return render(request, template, {
+        'categories': categories,
+        'category_posts': category_posts}
+        )
 
 
 def add_post(request):
