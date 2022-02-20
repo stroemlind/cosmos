@@ -69,7 +69,7 @@ class EditPost(generic.UpdateView):
     """
     model = Post
     template_name = 'edit_post.html'
-    fields = ['title', 'slug', 'image', 'content']
+    fields = ['title', 'image', 'content']
 
 
 class DeletePost(generic.DeleteView):
