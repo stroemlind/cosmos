@@ -3,16 +3,33 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container-fluid">
-    <h1>Edit Post</h1>
+    {% if user.id == post.author.id %}
+    <div class="container-fluid">
+        <h1>Edit Post</h1>
 
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}  
-        <button type="submit" class="btn btn-outline-dark">Update</button> 
-    </form>
-    
-</div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}  
+            <button type="submit" class="btn btn-outline-dark">Update</button> 
+        </form>
+        
+    </div>
+    {% else %}
+    <div class="container-fluid">
+        <div class="row g-0">
+            <div class="card col-md-8 offset-md-2 shadow-sm p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                    <h4 class="card-title">Ooops...</h4>
+                    <p class="card-text">We are sorry, but you are not the author of this post and can therefore not edit it</p>
+                </div>
+                <div class="text-center pt-2">
+                    <a href="{% url 'home' %}" class="btn btn-dark">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
 {% else %}
 
 <div class="container-fluid">
