@@ -4,19 +4,27 @@
 
 {% if user.is_authenticated %}
 <div class="container-fluid">
-    <h1 class="text-white">Create your post</h1>
     <div class="row">
-        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 g-3">
-            <form action="{% url 'add-post' %}" method="POST" enctype="multipart/form-data" class="text-white">
-                {% csrf_token %}
-                {{ form.as_p }}  
-                <button type="submit" class="btn btn-lg btn-outline-light">Share</button> 
-            </form>
+        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 g-3 card">
+            <div class="card-body">
+                <h2>Create your post</h2>
+                <hr>
+                <form action="{% url 'add-post' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}  
+                    <button type="submit" class="btn btn-lg btn-outline-dark">Share</button> 
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
+<script>
+    var name = '{{ user.id }}';
+    document.getElementById('author-id').value = name;
+</script>
 <script src="/static/js/script.js"></script>
+
 {% else %}
 
 <div class="container-fluid">
