@@ -22,8 +22,12 @@ def get_post(request, pk):
     """
     post = get_object_or_404(Post, pk=pk)
     template = 'post_detail.html'
+    # liked = False
+    # if post.likes.exists():
+    #     liked = True
     context = {
-        'post': post
+        'post': post,
+    #     'liked': liked,
     }
     return render(request, template, context)
 
@@ -75,3 +79,16 @@ class DeletePost(generic.DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+
+# Like function not done
+def post_like(request, pk):
+    """
+    function to collect likes
+    """
+    post = get_object_or_404(Post, pk=pk)
+    if post.likes.exists():
+        post.likes.remove(request)
+    else:
+        post.likes.add(request)
+
+    return HttpResponseRedirect(reverse('post_detail', args=[pk]))

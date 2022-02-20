@@ -22,10 +22,12 @@
             {% else %}
                 <img src="{{ post.image.url }}" alt="" width="100%">
             {% endif %}
+            {% if user.is_authenticated %}
             <p id="crud-btn">
                 <a href="{% url 'edit-post' post.pk %}" role="button">Edit</a>
                 <a href="{% url 'delete-post' post.pk %}" role="button">Delet</a>
             </p>
+            {% endif %}
             <p>
                 <a class="btn btn-outline-dark btn-sm offset-md-4" href="{% url 'home' %}" role="button">Back</a>
             </p>
