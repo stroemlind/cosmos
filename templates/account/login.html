@@ -11,10 +11,9 @@
   <div class="row g-0">
       <div class="card col-md-8 offset-md-2 shadow-sm p-3 mb-5 bg-body rounded">
           <div class="card-body">
-              <h4 class="card-title">Welcome to Cosmos {% trans "Sign In" %}!</h4>
-              <p class="card-text">{% blocktrans %}If you want to leave a comment or like, 
-                you have log in. Do not have an account yet? Then pleasecreate one by Sign Up
-                <a href="{{ signup_url }}">here!</a>{% endblocktrans %}
+              <h4 class="card-title">Welcome to Cosmos {% trans "Log In" %}!</h4>
+              <p class="card-text">{% blocktrans %}If you want to leave a post, comment or like, 
+                you have to log in.{% endblocktrans %}
               </p>
           </div>
           <div class="card-body">
@@ -25,8 +24,15 @@
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
               {% endif %}
               <!--<a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>-->
-              <button class="primaryAction btn btn-dark" type="submit">{% trans "Sign In" %}</button>
+              <button class="primaryAction btn btn-dark" type="submit">{% trans "Log In" %}</button>
             </form>
+          </div>
+          <div class="text-center pt-2">
+            <small>
+              <p class="card-text">{% blocktrans %}Do not have an account yet? Then please create one by signing up
+                <a href="{{ signup_url }}">here</a>!{% endblocktrans %}
+              </p>
+            </small>
           </div>
       </div>
   </div>

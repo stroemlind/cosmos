@@ -1,21 +1,41 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<div class="container-fluid">
+  <div class="row g-0">
+      <div class="card col-md-8 offset-md-2 shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="card-body">
+              <h4 class="card-title">{% trans "Sign Up" %}</h4>
+              <p class="card-text">{% blocktrans %}Welcome to Cosmos! To share posts, comments and likes you need to
+                have an account here. Just fill out the required information down below, it will just take a
+                short moment. We are looking forward to see you around in this cosmos!{% endblocktrans %}
+              </p>
+          </div>
+          <div class="card-body">
+            <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+              <button type="submit" class="btn btn-dark">{% trans "Sign Up" %} &raquo;</button>
+            </form>
+          </div>
+          <div class="text-center pt-2">
+            <small>
+              <p class="card-text">{% blocktrans %}Already a noise maker in this Cosmos? Then please 
+                <a href="{{ login_url }}">Log in</a>!{% endblocktrans %}
+              </p>
+            </small>
+          </div>
+      </div>
+  </div>
+</div>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
 
 {% endblock %}
