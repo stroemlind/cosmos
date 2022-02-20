@@ -15,7 +15,7 @@
 
     <!-- The section with image and information about the author -->
     <div class="row">
-        <div class="col-md-3 card">
+        <div class="col-md-3 card mx-auto">
             <p class="padd-round">By: {{ post.author }}</p>
             {% if "placeholder" in post.image.url %}
             <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="img-fluid rounded-start" alt="Images of text logo with a background of space">
@@ -24,9 +24,9 @@
             {% endif %}
             {% if user.is_authenticated %}
                 {% if user.id == post.author.id %}
-                <p id="crud-btn">
+                <p id="crud-btn" class="mx-auto">
                     <a href="{% url 'edit-post' post.pk %}" role="button">Edit</a>
-                    <a href="{% url 'delete-post' post.pk %}" role="button">Delet</a>
+                    <a href="{% url 'delete-post' post.pk %}" role="button">Delete</a>
                 </p>
                 {% endif %}
             {% endif %}
@@ -38,31 +38,37 @@
         <!-- Section with the title of the post -->
         <div class="col-md-9 gx-3">
             <div class="row">
-                <div class="col" id="title-post">
+                <div class="col mt-2" id="title-post">
                     <h3>{{ post.title }}</h3>
                 </div>
             </div>
 
-            <!-- This div-section with likes comes from the walkthrought project I think therefore I blog -->
+            <!-- This div-section with likes comes from the walkthrought project "I think therefore I blog" -->
             <div class="row">
-                <div class="col-md-2 col-sm-3">
-                    <strong class="text-white"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+                <div class="col-md-2 col-sm-4">
+                    <strong class="text-white"><i class="far fa-heart"></i> 
+                        {{ post.number_of_likes }} 
+                    </strong>
                 </div>
-                <div class="col-md-2 col-sm-3">
+                <div class="col-md-2 col-sm-4">
                     {% with comments.count as total_comments %}
                     <strong class="text-white"><i class="far fa-comments"></i>
-                        {{ total_comments }}</strong>
+                        {{ total_comments }}
+                    </strong>
                     {% endwith %}
                 </div>
-                <div class="col-md-2 col-sm-3">
-                    <strong class="text-white"><i class="far fa-album-collection"></i></strong>
-                    <small class="text-white">{{ post.category }}</small>
+                <div class="col-md-2 col-sm-4">
+                    <strong class="text-white"><i class="far fa-album-collection"></i>
+                        <small class="text-white">{{ post.category }}</small>
+                    </strong>
                 </div>
             </div>
 
             <!-- The Section of post content and a linebreak -->
-            <div class="card">
-                <p>{{ post.content|safe }}</p>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <p class="card-text">{{ post.content|safe }}</p>
+                </div>
             </div>
             <div class="col">
                 <br>
