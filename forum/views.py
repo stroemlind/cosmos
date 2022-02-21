@@ -24,7 +24,7 @@ class PostList(generic.ListView):
 
 def get_post(request, pk):
     """
-    Function to view a post in detail
+    Function to view a post in detail and get likes
     """
     post = get_object_or_404(Post, pk=pk)
     template = 'post_detail.html'
@@ -96,6 +96,9 @@ class LikeView(View):
     The view for likes
     """
     def post(self, request, pk, *args, **kwargs):
+        """
+        The function to determine the view if a user has liked a post or not
+        """
         post = get_object_or_404(Post, pk=pk)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)

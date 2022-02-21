@@ -96,6 +96,12 @@ footer a {
     text-decoration: none;
 }
 
+#page-btn a:hover {
+    background-color: #e92f00;
+    color: #fff;
+    text-decoration: none;
+}
+
 #btn-like {
     border: none;
     background: transparent;
