@@ -15,6 +15,12 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 12
 
+    # def get_context_data(self, *args, **kwargs):
+    #     category_menu = Category.objects.all()
+    #     context = super(PostList, self).get_context_data(*args, **kwargs)
+    #     context['category_menu'] = category_menu
+    #     return context
+
 
 def get_post(request, pk):
     """
@@ -22,12 +28,16 @@ def get_post(request, pk):
     """
     post = get_object_or_404(Post, pk=pk)
     template = 'post_detail.html'
-    # liked = False
-    # if post.likes.exists():
-    #     liked = True
+    number_of_likes = post.number_of_likes()
+    liked = False
+    if request.method == 'POST':
+        if post.likes.filter(id=post.request.user.id).exists():
+            liked = True
+            return liked
     context = {
         'post': post,
-    #     'liked': liked,
+        'liked': liked,
+        'number_of_likes': number_of_likes,
     }
     return render(request, template, context)
 
@@ -80,15 +90,16 @@ class DeletePost(generic.DeleteView):
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
 
-# Like function not done
-def post_like(request, pk):
-    """
-    function to collect likes
-    """
-    post = get_object_or_404(Post, pk=pk)
-    if post.likes.exists():
-        post.likes.remove(request)
-    else:
-        post.likes.add(request)
 
-    return HttpResponseRedirect(reverse('post_detail', args=[pk]))
+class LikeView(View):
+    """
+    The view for likes
+    """
+    def post(self, request, pk, *args, **kwargs):
+        post = get_object_or_404(Post, pk=pk)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post-detail', args=[pk]))

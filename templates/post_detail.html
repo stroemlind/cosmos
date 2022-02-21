@@ -46,8 +46,24 @@
             <!-- This div-section with likes comes from the walkthrought project "I think therefore I blog" -->
             <div class="row">
                 <div class="col-md-2 col-sm-4">
-                    <strong class="text-white"><i class="far fa-heart"></i> 
-                        {{ post.number_of_likes }} 
+                    <strong>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" value="{{post.pk}}" class="text-white" id="btn-like">
+                                <i class="fas fa-heart"></i> 
+                            </button>
+                            {% else %}
+                            <button type="submit" value="{{post.pk}}" class="text-white" id="btn-like">
+                                <i class="far fa-heart"></i> 
+                            </button>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span><i class="far fa-heart"></i> </span>
+                        {% endif %}
+                        <span class="text-white">{{ post.number_of_likes }} </span>
                     </strong>
                 </div>
                 <div class="col-md-2 col-sm-4">
@@ -58,7 +74,7 @@
                     {% endwith %}
                 </div>
                 <div class="col-md-2 col-sm-4">
-                    <strong class="text-white"><i class="far fa-album-collection"></i>
+                    <strong class="text-white d-inline"><i class="far fa-album-collection"></i>
                         <small class="text-white">{{ post.category }}</small>
                     </strong>
                 </div>
@@ -94,5 +110,9 @@
         </div>   
     </div>
   </div>
+
+  {% for item in category_menu %}
+  {{ item }}
+  {% endfor %}
 
 {% endblock %}

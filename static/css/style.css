@@ -95,3 +95,14 @@ footer a {
     color: #1e164b;
     text-decoration: none;
 }
+
+#btn-like {
+    border: none;
+    background: transparent;
+}
+
+#btn-like:hover,
+#btn-like:active {
+    background: transparent;
+    border: none;
+}
