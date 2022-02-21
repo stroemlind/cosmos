@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .models import Post, Category
-from .forms import PostForm
+from django.db.models import Sum
+from .models import Post, Category, Comment
+from .forms import PostForm, CommentForm
 
 # Create your views here.
 class PostList(generic.ListView):
@@ -28,6 +29,7 @@ def get_post(request, pk):
     """
     post = get_object_or_404(Post, pk=pk)
     template = 'post_detail.html'
+    comments = post.comments.filter(approved=True).order_by('-created_on')
     number_of_likes = post.number_of_likes()
     liked = False
     if request.method == 'POST':
@@ -36,8 +38,11 @@ def get_post(request, pk):
             return liked
     context = {
         'post': post,
+        'comments': comments,
+        'commented': False,
         'liked': liked,
         'number_of_likes': number_of_likes,
+        # 'comment_form': CommentForm()
     }
     return render(request, template, context)
 

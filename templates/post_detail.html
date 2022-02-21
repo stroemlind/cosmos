@@ -93,16 +93,48 @@
             <!-- Comment section -->
             <div class="container card g-0">
                 <div class="row g-0">
-                    <div class="col-md-7 card">
+                    <div class="col-md-6 card">
                         <h5>Conversation:</h5>
-                        <div class="col">
-                            <p>here you will see comments</p>
+                        {% if not post.comments.all %}
+                        <div class="col card-body">
+                            <p>Be the first to respond!</p>
                         </div>
+                        {% else %}
+                        <div class="col-md-10 ms-2 my-2 card-body border border-secondary">
+                            {% for comment in post.comments.all %}
+                            <div class="row">
+                                <div class="col border-end">
+                                    <strong><p>{{ comment.user }}</p></strong>
+                                </div>
+                                <div class="col">
+                                    <small><p>{{ comment.created_on }}</p></small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col border-top">
+                                    <p> {{ comment.body | linebreaks }} </p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
                     </div>
-                    <div class="col-md-5 card">
-                        <h5>Join in:</h5>
-                        <div class="col">
-                            <p>here you will create a comment</p>
+                    <div class="col-md-6 card">  
+                        <div class="col card-body">
+                            {% if commented %}
+                            <div class="alert alert-success" role="alert">
+                                Your comment is awaiting approval
+                            </div>
+                            {% else %}
+                            {% if user.is_authenticated %}
+                            <h5>Join in {{ user.username }}:</h5>
+                            <form method="post" action="{% url 'post-detail' post.pk %}">
+                                {% csrf_token %}
+                                {{ comment_form }}
+                                <button type="submit" class="btn btn-outline-dark mt-2">Submit</button>
+                            </form>
+                            {% endif %}
+                            {% endif %}
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row g-0">
+        {% for likes in like_list %}
+        <div class="card col-md-10 col-sm-12 mb-3 offset-md-1" id="post-body">
+            <div class="row g-0">
+                <div class="col-md-2 col-sm-3">
+                    {% if "placeholder" in post.image.url %}
+                    <a href="{% url 'post-detail' post.pk %}">
+                        <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="img-fluid rounded-start" alt="Images of text logo with a background of space">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'post-detail' post.pk %}">
+                        <img src="{{ post.image.url }}" alt="" width="100%">
+                    </a>
+                    {% endif %} 
+                </div>
+                <div class="col-md-10 col-sm-9">
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">{{ post.category }}</small></p>
+                        <h5 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="post-title">{{ post.title }}</a></h5>
+                        <p class="card-text">{{ post.content|safe }}</p>
+                        <p class="card-text"><small class="text-muted">By: {{ post.author }} -
+                        {{ post.created_on}} </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

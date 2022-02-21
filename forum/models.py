@@ -62,7 +62,7 @@ class Comment(models.Model):
     The class based model for Comments on the forums post
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE,
-                            related_name='forum_comment')
+                             related_name='forum_comment')
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     body = models.TextField()

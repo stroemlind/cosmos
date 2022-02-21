@@ -12,4 +12,5 @@ urlpatterns = [
     path('category/<str:categories>/', views.category_page, name='category'),
     # path('category/<str:categories>/', views.category_menu, name='category-menu'),
     path('like/<int:pk>', views.LikeView.as_view(), name='post_like'),
+    # path('popular_post/', views.PopLikes.as_view(), name='popular_post'),
 ]

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Category
+from .models import Post, Category, Comment
 
 choices = Category.objects.all().values_list('category_name', 'category_name')
 
@@ -47,3 +47,13 @@ class PostForm(forms.ModelForm):
                 ),
             'status': forms.Select(attrs={'class': 'form-control'})
         }
+
+
+class CommentForm(forms.ModelForm):
+    """ test """
+    class Meta:
+        """
+        The Meta class with what will be displayed and widgets
+        """
+        model = Comment
+        fields = ('body',)
