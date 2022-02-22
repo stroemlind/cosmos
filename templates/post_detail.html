@@ -94,27 +94,33 @@
             <div class="container card g-0">
                 <div class="row g-0">
                     <div class="col-md-6 card">
-                        <h5>Conversation:</h5>
+                        <h3 class="padd-round ">Conversation:</h3>
                         {% if not post.comments.all %}
                         <div class="col card-body">
                             <p>Be the first to respond!</p>
                         </div>
                         {% else %}
-                        <div class="col-md-10 ms-2 my-2 card-body border border-secondary">
+                        <div class="col-md-10 ms-2 my-2 card-body">
                             {% for comment in post.comments.all %}
+                            {% if comment.approved %}
                             <div class="row">
-                                <div class="col border-end">
-                                    <strong><p>{{ comment.user }}</p></strong>
-                                </div>
-                                <div class="col">
-                                    <small><p>{{ comment.created_on }}</p></small>
+                                <div class="col border-end card-body border border-secondary mb-2 rounded">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <strong><p>{{ comment.user }}</p></strong>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small><p>{{ comment.created_on }}</p></small>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="border-top"> {{ comment.body|safe }} </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col border-top">
-                                    <p> {{ comment.body|safe }} </p>
-                                </div>
-                            </div>
+                            {% endif %}
                             {% endfor %}
                         </div>
                         {% endif %}
@@ -127,13 +133,8 @@
                             </div>
                             {% else %}
                             {% if user.is_authenticated %}
-                            <h5>Join in {{ user.username }}:</h5>
+                            <h3>Join in {{ user.username }}:</h3>
                             <a href="{% url 'add-comment' post.pk %}" role="button" class="btn btn-outline-dark btn-sm mt-2">Add a Comment </a>
-                            <!-- <form method="POST" action="{% url 'post-detail' post.pk %}">
-                                {{ comment_form.as_p }}
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-outline-dark mt-2">Submit</button>
-                            </form>-->
                             {% endif %}
                             {% endif %}
                         </div>
@@ -143,9 +144,5 @@
         </div>   
     </div>
   </div>
-
-  {% for item in category_menu %}
-  {{ item }}
-  {% endfor %}
 
 {% endblock %}

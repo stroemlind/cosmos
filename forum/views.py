@@ -40,7 +40,7 @@ def get_post(request, pk):
     context = {
         'post': post,
         'comments': comments,
-        'commented': False,
+        # 'commented': False,
         'liked': liked,
         'number_of_likes': number_of_likes,
         'CommentForm': CommentForm()

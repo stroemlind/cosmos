@@ -12,7 +12,6 @@
                     <form action="{% url 'add-comment' post.pk %}" method="POST">
                         {% csrf_token %}
                         {{ comment_form }}  
-                        <!--<input type="hidden" name="next" value="{% url 'post-detail' post.pk %}" />-->
                         <button type="submit" class="btn btn-outline-dark mt-2">Share Comment</button> 
                     </form>
                 </div>
