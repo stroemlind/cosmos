@@ -9,6 +9,8 @@
                 <div class="card-body">
                     <h2>Add a Comment</h2>
                     <hr>
+                    <small><p>Your comment need to be approved before it shown. So don't worry if you cant see it at once!</p></small>
+                    <hr>
                     <form action="{% url 'add-comment' post.pk %}" method="POST">
                         {% csrf_token %}
                         {{ comment_form }}  

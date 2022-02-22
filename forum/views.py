@@ -91,11 +91,7 @@ def add_comment(request, pk):
             comment.post = post
             comment.save()
             # post_id = post.pk  # you don't need this as post_id is already post.pk (may need to check template for possible errors if you take this out)
-            return redirect('post-detail', pk #{
-                # 'post': post,
-                # 'post_id': post_id,
-                #'comment': comment,
-                #'commented': True,}
+            return redirect('post-detail', pk
             )
         # else: # you don't really need this else statement as it comes after a return, which will break from the code
     context = {
