@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from django.db.models import Sum
+# from django.db.models import Sum
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 
@@ -36,13 +36,14 @@ def get_post(request, pk):
         if post.likes.filter(id=post.request.user.id).exists():
             liked = True
             return liked
+
     context = {
         'post': post,
         'comments': comments,
         'commented': False,
         'liked': liked,
         'number_of_likes': number_of_likes,
-        # 'comment_form': CommentForm()
+        'CommentForm': CommentForm()
     }
     return render(request, template, context)
 
@@ -76,6 +77,32 @@ def add_post(request):
         'form': form
     }
     return render(request, 'add_post.html', context)
+
+
+def add_comment(request, pk):
+    """ test """
+    post = get_object_or_404(Post, pk=pk) # both post and comment_form are used by this func, whatever the method is
+    comment_form = CommentForm() # if the method is POST, comment_form will be updated, however
+    # we can't rely on POST data here because we haven't yet established the method
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST, request.FILES)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+            # post_id = post.pk  # you don't need this as post_id is already post.pk (may need to check template for possible errors if you take this out)
+            return redirect('post-detail', pk #{
+                # 'post': post,
+                # 'post_id': post_id,
+                #'comment': comment,
+                #'commented': True,}
+            )
+        # else: # you don't really need this else statement as it comes after a return, which will break from the code
+    context = {
+        'comment_form': comment_form,
+        'post': post,
+    }
+    return render(request, 'add_comment.html', context)
 
 
 class EditPost(generic.UpdateView):

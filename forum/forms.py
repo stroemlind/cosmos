@@ -56,4 +56,16 @@ class CommentForm(forms.ModelForm):
         The Meta class with what will be displayed and widgets
         """
         model = Comment
-        fields = ('body',)
+        fields = (
+            'user',
+            'body',
+            )
+
+        widgets = {
+            'user': forms.TextInput(attrs={
+                'class': 'form-control',
+                'value': '',
+                'id': 'user-id',
+                'type': 'hidden'
+                }),
+        }

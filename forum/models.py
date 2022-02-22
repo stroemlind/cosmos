@@ -65,7 +65,7 @@ class Comment(models.Model):
                              related_name='forum_comment')
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
-    body = models.TextField()
+    body = HTMLField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 

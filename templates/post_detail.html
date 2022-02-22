@@ -48,7 +48,7 @@
                 <div class="col-md-2 col-sm-4">
                     <strong>
                         {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST">
+                        <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST" name="likeForm">
                             {% csrf_token %}
                             {% if liked %}
                             <button type="submit" value="{{post.pk}}" class="text-white" id="btn-like">
@@ -112,7 +112,7 @@
                             </div>
                             <div class="row">
                                 <div class="col border-top">
-                                    <p> {{ comment.body | linebreaks }} </p>
+                                    <p> {{ comment.body|safe }} </p>
                                 </div>
                             </div>
                             {% endfor %}
@@ -128,11 +128,12 @@
                             {% else %}
                             {% if user.is_authenticated %}
                             <h5>Join in {{ user.username }}:</h5>
-                            <form method="post" action="{% url 'post-detail' post.pk %}">
+                            <a href="{% url 'add-comment' post.pk %}" role="button" class="btn btn-outline-dark btn-sm mt-2">Add a Comment </a>
+                            <!-- <form method="POST" action="{% url 'post-detail' post.pk %}">
+                                {{ comment_form.as_p }}
                                 {% csrf_token %}
-                                {{ comment_form }}
                                 <button type="submit" class="btn btn-outline-dark mt-2">Submit</button>
-                            </form>
+                            </form>-->
                             {% endif %}
                             {% endif %}
                         </div>
