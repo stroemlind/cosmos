@@ -141,6 +141,8 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endif %}
+                            {% endfor %}
                             <div class="row g-2">
                                 <div class="col-md-5 col-sm-5 my-3">
                                     {% if user.is_authenticated %}
@@ -148,25 +150,9 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            {% endif %}
-                            {% endfor %}
                         </div>
                         {% endif %}
                     </div>
-                    <!--<div class="col-md-2 card">  
-                        <div class="col card-body">
-                            {% if commented %}
-                            <div class="alert alert-success" role="alert">
-                                Your comment is awaiting approval
-                            </div>
-                            {% else %}
-                            {% if user.is_authenticated %}
-                            <h3>{{ user.username }}, Join in:</h3>
-                            <a href="{% url 'add-comment' post.pk %}" role="button" class="btn btn-outline-dark btn-sm mt-2">Add a Comment </a>
-                            {% endif %}
-                            {% endif %}
-                        </div>
-                    </div>-->
                 </div>
             </div>
         </div>   
