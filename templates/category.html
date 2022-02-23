@@ -2,11 +2,9 @@
 
 {% block content %}
 
-{% if category_posts %}
-
 <div class="container-fluid">
     <div class="row g-0">
-{% for post in category_posts %}
+        {% for post in category_post %}
 
         <div class="card col-md-10 col-sm-12 mb-3 offset-md-1" id="post-body">
             <div class="row g-0">
@@ -23,7 +21,7 @@
                 </div>
                 <div class="col-md-10 col-sm-9">
                     <div class="card-body">
-                        <p class="card-text"><small class="text-muted">{{ post.category }}</small></p>
+                        <a href="#" class="nav-link p-0"><p class="card-text"><small class="text-muted">{{ post.category }}</small></p></a>
                         <h5 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="post-title">{{ post.title }}</a></h5>
                         <p class="card-text">{{ post.content|safe }}</p>
                         <p class="card-text"><small class="text-muted">By: {{ post.author }} -
@@ -32,27 +30,9 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-</div>
+</div>  
 
-{% endfor %}
-
-{% else %}
-
-<div class="container-fluid">
-    <div class="row g-0">
-        <div class="card col-md-8 offset-md-2 shadow-sm p-3 mb-5 bg-body rounded">
-            <div class="card-body">
-                <h4 class="card-title">Ooops...</h4>
-                <p class="card-text">We are sorry, but it looks like what you are looking for does not exists in this cosmos!</p>
-            </div>
-            <div class="text-center pt-2">
-                <a href="{% url 'home' %}" class="btn btn-dark">Back to Home</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-{% endif %}
 
 {% endblock %}

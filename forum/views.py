@@ -7,20 +7,52 @@ from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 
 # Create your views here.
-class PostList(generic.ListView):
-    """
-    The class to display all the post in the forum
-    """
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
-    paginate_by = 12
+# class PostList(View):
+#     """
+#     The class to display all the post in the forum
+#     """
+#     model = Post
+#     queryset = Post.objects.filter(status=1).order_by('-created_on')
+#     template_name = 'index.html'
+#     paginate_by = 12
+#     # category = Category.objects.all()
+# 
+#     def get(self, request, *args, **kwargs):
+#        # post = post.filter(category__in=categories)
+#         category = request.GET.get("category")
+#         selected_category = Category.objects.filter(Category, category__name=category)
+# 
+#         context = {
+#             'post': post,
+#             'selected_category': selected_category
+#         }
+#         return render(request, 'index.html', context)
 
-    # def get_context_data(self, *args, **kwargs):
-    #     category_menu = Category.objects.all()
-    #     context = super(PostList, self).get_context_data(*args, **kwargs)
-    #     context['category_menu'] = category_menu
-    #     return context
+
+# The working function until I click on a category in the navbar
+def category_menu(request):
+    """ test """
+    post = Post.objects.filter(status=1).order_by('-created_on')
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category']
+            post = post.filter(category__in=categories)
+            categories = Category.objects.filter(category_name__in=categories)
+
+        context = {
+            'post': post,
+            'current_categories': categories,
+        }
+        return render(request, 'category.html', context)
+
+    context = {
+        'post': post,
+        'current_categories': categories,
+    }
+
+    return render(request, 'index.html', context)
 
 
 def get_post(request, pk):
@@ -48,16 +80,22 @@ def get_post(request, pk):
     return render(request, template, context)
 
 
-def category_page(request, categories):
+def category_page(request):
     """
     Function to view each category on its own page
     """
-    category_posts = Post.objects.filter(category=categories)
+    category = request.GET.get("category")
+    category_post = Post.objects.filter(category=category)
+    # for post in list(category_post):
+    #     print(f"POST: {post}")
+    # categories = Category.objects.filter(category_name__in=categories)
+    # category_posts = Post.objects.filter(category=categories)
     template = 'category.html'
     return render(request, template, {
-        'categories': categories,
-        'category_posts': category_posts}
-        )
+        'category': category,
+        'category_post': category_post,
+        }
+    )
 
 
 def add_post(request):
@@ -80,7 +118,9 @@ def add_post(request):
 
 
 def add_comment(request, pk):
-    """ test """
+    """
+    Function view to add comment to a post
+    """
     post = get_object_or_404(Post, pk=pk) # both post and comment_form are used by this func, whatever the method is
     comment_form = CommentForm() # if the method is POST, comment_form will be updated, however
     # we can't rely on POST data here because we haven't yet established the method
@@ -143,3 +183,9 @@ class MostLikedPost(generic.ListView):
         like_count=Count('likes')).order_by('-like_count')
     template_name = 'popular_post.html'
     paginate_by = 15
+
+    # def get_context_data(self, *args, **kwargs):
+    #     category_menu = Category.objects.all()
+    #     context = super(MostLikedPost, self).get_context_data(*args, **kwargs)
+    #     context['category_menu'] = category_menu
+    #     return context

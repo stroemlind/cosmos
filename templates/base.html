@@ -53,7 +53,7 @@
                 </li>
               </ul>
                 {% endif %}
-              <!--<form class="d-flex">
+              <!--<form action="{% url 'category' %}" method="GET" class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>-->
@@ -70,39 +70,48 @@
                   <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Music Categories
                   </a>
+                  <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for item in category_menu %}
+                    {% if item in category_menu %}
+                    <li>
+                      <a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                  </ul>-->
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Afro">Afro</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Blues">Blues</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Christmas">Christmas</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Classic">Classic</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Country">Country</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Disco">Disco</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=EDM">EDM</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Folk">Folk</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Funk">Funk</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=HipHop">HipHop</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Indie">Indie</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Jazz">Jazz</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=K-Pop">K-Pop</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Latino">Latino</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Metal">Metal</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Pop">Pop</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Punk">Punk</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Rap">Rap</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Reggae">Reggae</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=RnB">RnB</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Rock">Rock</a></li>
-                    <li><a class="dropdown-item" href="{% url 'home' %}?category=Soul">Soul</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Afron">Afro</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category'%}?category=Blues">Blues</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Christmas">Christmas</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Classic">Classic</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Country">Country</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Disco">Disco</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=EDM">EDM</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Folk">Folk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Funk">Funk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=HipHop">HipHop</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Indie">Indie</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Jazz">Jazz</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=K-Pop">K-Pop</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Latino">Latino</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Metal">Metal</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Pop">Pop</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Punk">Punk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Rap">Rap</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Reggae">Reggae</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=RnB">RnB</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Rock">Rock</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Soul">Soul</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'home' %}?category=New Releases">New Releases</a>
+                  <a class="nav-link text-white" href="{% url 'category' %}?category=New Releases">New Releases</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'home' %}?category=album review">Album Reviews</a>
+                  <a class="nav-link text-white" href="{% url 'category' %}?category=Album Review">Album Reviews</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'home' %}?category=Music Video">Music Video</a>
+                  <a class="nav-link text-white" href="{% url 'category' %}?category=Music Video">Music Video</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white" href="{% url 'popular_post' %}">Most Popular Post</a>
@@ -110,6 +119,7 @@
               </ul>
           </div>
         </nav>
+
       </div>
     </header>
     <main class="flex-shrink-0">
@@ -117,12 +127,6 @@
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
-
-    <div>
-      {% for item in category_menu %}
-        {{ item }}
-      {% endfor %}
-    </div>
 
     <!-- Footer -->
     <footer class="text-center">
