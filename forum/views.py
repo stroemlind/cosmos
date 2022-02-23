@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-# from django.db.models import Sum
+from django.db.models import Count
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 
@@ -134,3 +134,12 @@ class LikeView(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post-detail', args=[pk]))
+
+
+class MostLikedPost(generic.ListView):
+    """ test """
+    model = Post
+    queryset = Post.objects.filter(status=1).annotate(
+        like_count=Count('likes')).order_by('-like_count')
+    template_name = 'popular_post.html'
+    paginate_by = 15
