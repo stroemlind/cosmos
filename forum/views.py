@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.db.models import Count
+from django.core.paginator import Paginator
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 
@@ -35,6 +36,9 @@ def home_view(request):
     one first. Alls sets the links in the category navbar
     """
     post = Post.objects.filter(status=1).order_by('-created_on')
+    # paginator = Paginator(post, 12)
+    # page = request.GET.get('page')
+    # page_obj = paginator.get_page(page)
     categories = None
 
     if request.GET:
@@ -42,16 +46,26 @@ def home_view(request):
             categories = request.GET['category']
             post = post.filter(category__in=categories)
             categories = Category.objects.filter(category_name__in=categories)
+            # paginator = Paginator(Post.objects.filter(status=1).order_by(
+            #     '-created_on'), 12)
+            # page = request.GET.get('page')
+            # page_obj = paginator.get_page(page)
 
         context = {
             'post': post,
             'current_categories': categories,
+            # 'page_obj': page_obj
         }
         return render(request, 'category.html', context)
+
+    # paginator = Paginator(post, 12)
+    # page = request.GET.get('page')
+    # page_obj = paginator.get_page(page)
 
     context = {
         'post': post,
         'current_categories': categories,
+        # 'page_obj': page_obj
     }
 
     return render(request, 'index.html', context)
@@ -59,7 +73,7 @@ def home_view(request):
 
 def get_post(request, pk):
     """
-    Function to view a post in detail and get likes
+    Function to view a post in detail, give likes and view comments.
     """
     post = get_object_or_404(Post, pk=pk)
     template = 'post_detail.html'
