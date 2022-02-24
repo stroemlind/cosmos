@@ -40,12 +40,14 @@ class PostForm(forms.ModelForm):
                 'id': 'author-id',
                 'type': 'hidden'
                 }),
-            # 'author': forms.Select(attrs={'class': 'form-control'}),
             'image': forms.FileInput(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={
                 'class': 'form-control'}
                 ),
-            'status': forms.Select(attrs={'class': 'form-control'})
+            'status': forms.TextInput(attrs={
+                'class': 'form-control',
+                'type': 'hidden'
+                })
         }
 
 
