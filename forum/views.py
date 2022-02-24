@@ -154,13 +154,33 @@ def add_comment(request, pk):
     return render(request, 'add_comment.html', context)
 
 
-class EditPost(generic.UpdateView):
+# class EditPost(generic.UpdateView):
+#     """
+#     The class to edit a post
+#     """
+#     model = Post
+#     template_name = 'edit_post.html'
+#     fields = ['title', 'image', 'content']
+
+
+def edit_post(request, pk):
     """
-    The class to edit a post
+    Function to add a post to the forum
     """
-    model = Post
-    template_name = 'edit_post.html'
-    fields = ['title', 'image', 'content']
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save()
+            post_id = post.pk
+            return redirect(get_post, post_id)
+
+    form = PostForm(instance=post)
+    context = {
+        'post': post,
+        'form': form
+    }
+    return render(request, 'edit_post.html', context)
 
 
 class DeletePost(generic.DeleteView):
