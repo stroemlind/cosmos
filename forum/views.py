@@ -29,9 +29,11 @@ from .forms import PostForm, CommentForm
 #         return render(request, 'index.html', context)
 
 
-# The working function until I click on a category in the navbar
-def category_menu(request):
-    """ test """
+def home_view(request):
+    """
+    The view function to display a list of all the post made with newest
+    one first. Alls sets the links in the category navbar
+    """
     post = Post.objects.filter(status=1).order_by('-created_on')
     categories = None
 
@@ -72,7 +74,6 @@ def get_post(request, pk):
     context = {
         'post': post,
         'comments': comments,
-        # 'commented': False,
         'liked': liked,
         'number_of_likes': number_of_likes,
         'CommentForm': CommentForm()
@@ -88,8 +89,6 @@ def category_page(request):
     category_post = Post.objects.filter(category=category)
     # for post in list(category_post):
     #     print(f"POST: {post}")
-    # categories = Category.objects.filter(category_name__in=categories)
-    # category_posts = Post.objects.filter(category=categories)
     template = 'category.html'
     return render(request, template, {
         'category': category,
@@ -177,15 +176,11 @@ class LikeView(View):
 
 
 class MostLikedPost(generic.ListView):
-    """ test """
+    """
+    The function for the 'Most Populare Post' view
+    """
     model = Post
     queryset = Post.objects.filter(status=1).annotate(
         like_count=Count('likes')).order_by('-like_count')
     template_name = 'popular_post.html'
     paginate_by = 15
-
-    # def get_context_data(self, *args, **kwargs):
-    #     category_menu = Category.objects.all()
-    #     context = super(MostLikedPost, self).get_context_data(*args, **kwargs)
-    #     context['category_menu'] = category_menu
-    #     return context

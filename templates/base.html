@@ -53,16 +53,12 @@
                 </li>
               </ul>
                 {% endif %}
-              <!--<form action="{% url 'category' %}" method="GET" class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>-->
             </div>
           </div>
         </nav>
       </div>
       <div>
-        <!-- Post category navbar -->
+        <!-- Post Category navbar -->
         <nav class="navbar navbar-expand-sm" id="category-nav">
           <div class="container-fluid">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-md-3">
@@ -70,15 +66,6 @@
                   <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Music Categories
                   </a>
-                  <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {% for item in category_menu %}
-                    {% if item in category_menu %}
-                    <li>
-                      <a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-                  </ul>-->
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item" href="{% url 'category' %}?category=Afron">Afro</a></li>
                     <li><a class="dropdown-item" href="{% url 'category'%}?category=Blues">Blues</a></li>
