@@ -5,7 +5,7 @@ font-family: 'Montserrat Subrayada', sans-serif;
 font-family: 'Quicksand', sans-serif;*/
 
 body {
-    background-color: lavender;
+    background-color: #0A042A;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -38,7 +38,7 @@ nav li {
 #main-nav,
 #category-nav,
 footer {
-    background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645778279/pexels-francesco-ungaro-998641_fkotsz.jpg);
+    background-color: #0A042A;
 }
 
 #main-nav a {
@@ -48,9 +48,6 @@ footer {
 #category-nav {
     min-height: 40px;
     margin-bottom: 10px;
-    /*background-color: rgba(0, 0, 0, 0.2);*/
-    opacity: 0.8;
-    /*background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645778279/pexels-francesco-ungaro-998641_fkotsz.jpg);*/
 }
 
 #category-nav li {
