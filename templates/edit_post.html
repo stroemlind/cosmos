@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h2>Edit Post</h2>
                     <hr>
-                    <form action="{% url 'edit-post' post.pk %}" method="POST">
+                    <form action="" method="POST">
                         {% csrf_token %}
                         {{ form.as_p }}  
                         <button type="submit" class="btn btn-outline-dark">Update</button> 
