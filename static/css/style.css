@@ -5,7 +5,6 @@ font-family: 'Montserrat Subrayada', sans-serif;
 font-family: 'Quicksand', sans-serif;*/
 
 body {
-    background-image: linear-gradient(to left bottom, #1e164b, #241a55, #2a1e5f, #302269, #362673, #3c3282, #423e91, #474aa1, #4c60b8, #5277cf, #588ee5, #5fa5fb);
     background-color: lavender;
     font-family: 'Quicksand', sans-serif;
 }
@@ -31,6 +30,10 @@ img {
     padding: 5px;
 }
 
+.main-body {
+    background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645778279/pexels-francesco-ungaro-998641_fkotsz.jpg);
+}
+
 /* Navbar styles */
 nav li {
     font-size: 20px;
@@ -43,6 +46,7 @@ nav li {
 #category-nav {
     min-height: 40px;
     margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #category-nav li {
