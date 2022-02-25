@@ -30,13 +30,15 @@ img {
     padding: 5px;
 }
 
-.main-body {
-    background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645778279/pexels-francesco-ungaro-998641_fkotsz.jpg);
-}
-
 /* Navbar styles */
 nav li {
     font-size: 20px;
+}
+
+#main-nav,
+#category-nav,
+footer {
+    background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645778279/pexels-francesco-ungaro-998641_fkotsz.jpg);
 }
 
 #main-nav a {
@@ -46,7 +48,9 @@ nav li {
 #category-nav {
     min-height: 40px;
     margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    /*background-color: rgba(0, 0, 0, 0.2);*/
+    opacity: 0.8;
+    /*background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645778279/pexels-francesco-ungaro-998641_fkotsz.jpg);*/
 }
 
 #category-nav li {
