@@ -38,12 +38,6 @@ nav li {
     font-size: 20px;
 }
 
-/*#main-nav,
-#category-nav,
-footer {
-    background-color: #0A042A;
-}*/
-
 #main-nav a,
 #category-nav a {
     color: #03010e;
@@ -77,7 +71,10 @@ footer a {
 /* Post detail styles */
 #title-post {
     font-family: 'Montserrat Subrayada', sans-serif;
-    color: #fff;
+}
+
+.detail-body {
+    background-color: rgb(252, 251, 255);
 }
 
 

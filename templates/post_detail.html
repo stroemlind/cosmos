@@ -3,11 +3,11 @@
 {% block content %}
 
 <!-- Detail blog post -->
-<div class="container pt-3 main-body">
+<div class="container py-3 px-5 mb-4 main-body detail-body">
     <!-- The row with created on information -->
     <div class="row">
         <div class="col gx-0">
-            <p class="card padd-round">
+            <p class="card border-0 padd-round detail-body">
                 {{ post.created_on}}
             </p>
         </div>
@@ -15,7 +15,7 @@
 
     <!-- The section with image and information about the author -->
     <div class="row">
-        <div class="col-md-3 card mx-auto">
+        <div class="col-md-3 card mx-auto border-dark bg-white">
             <div class="row">
                 <div class="col">
                     <p class="padd-round">By: {{ post.author }}</p>
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Section with the title of the post -->
-        <div class="col-md-9 gx-3">
+        <div class="col-md-9 gx-3 detail-body">
             <div class="row">
                 <div class="col mt-2" id="title-post">
                     <h3>{{ post.title }}</h3>
@@ -63,38 +63,38 @@
                         <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST" name="likeForm">
                             {% csrf_token %}
                             {% if liked %}
-                            <button type="submit" value="{{post.pk}}" class="text-white" id="btn-like">
+                            <button type="submit" value="{{post.pk}}" id="btn-like">
                                 <i class="fas fa-heart"></i> 
                             </button>
                             {% else %}
-                            <button type="submit" value="{{post.pk}}" class="text-white" id="btn-like">
+                            <button type="submit" value="{{post.pk}}" id="btn-like">
                                 <i class="far fa-heart"></i> 
                             </button>
                             {% endif %}
                         </form>
                         {% else %}
-                        <span><i class="far fa-heart text-white"></i> </span>
+                        <span><i class="far fa-heart"></i> </span>
                         {% endif %}
-                        <span class="text-white">{{ post.number_of_likes }} </span>
+                        <span>{{ post.number_of_likes }} </span>
                     </strong>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     {% with comments.count as total_comments %}
-                    <strong class="text-white"><i class="far fa-comments"></i>
+                    <strong><i class="far fa-comments"></i>
                         {{ total_comments }}
                     </strong>
                     {% endwith %}
                 </div>
                 <div class="col-md-2 col-sm-4">
-                    <strong class="text-white d-inline"><i class="far fa-album-collection"></i>
-                        <small class="text-white">{{ post.category }}</small>
+                    <strong class="d-inline"><span><i class="far fa-album-collection"></i></span>
+                        <small>{{ post.category }}</small>
                     </strong>
                 </div>
             </div>
 
             <!-- The Section of post content and a linebreak -->
-            <div class="card mt-2">
-                <div class="card-body">
+            <div class="card mt-2 border-0 detail-body">
+                <div class="card-body border-top border-bottom border-dark">
                     <p class="card-text">{{ post.content|safe }}</p>
                 </div>
             </div>
@@ -103,9 +103,9 @@
             </div>
 
             <!-- Comment section -->
-            <div class="container card g-0">
+            <div class="container card border border-0 g-0">
                 <div class="row g-0">
-                    <div class="col-md-12 card">
+                    <div class="col-md-12 card border-0 detail-body">
                         <div class="row">
                             <div class="col-md-7 col-sm-8">
                                 <h3 class="padd-round ">Conversation:</h3>
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                         {% if not post.comments.all %}
-                        <div class="col card-body">
+                        <div class="col card-body border-0">
                             <p>Be the first to respond!</p>
                         </div>
                         {% else %}
@@ -125,7 +125,7 @@
                             {% for comment in post.comments.all %}
                             {% if comment.approved %}
                             <div class="row">
-                                <div class="col border-end card-body border border-secondary mb-2 rounded">
+                                <div class="col border-end card-body border border-secondary mb-2 bg-white rounded">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <strong><p>{{ comment.user }}</p></strong>
@@ -157,6 +157,6 @@
             </div>
         </div>   
     </div>
-  </div>
+</div>
 
 {% endblock %}
