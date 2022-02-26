@@ -5,7 +5,10 @@ font-family: 'Montserrat Subrayada', sans-serif;
 font-family: 'Quicksand', sans-serif;*/
 
 body {
-    background-color: #0A042A;
+    background-color: rgb(252, 251, 255);
+    /*background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645866390/pexels-felix-mittermeier-956981_2_bs7jpj.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -17,7 +20,7 @@ img {
 
 .logo {
     font-family: 'Modak', cursive;
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .post-title {
@@ -35,14 +38,15 @@ nav li {
     font-size: 20px;
 }
 
-#main-nav,
+/*#main-nav,
 #category-nav,
 footer {
     background-color: #0A042A;
-}
+}*/
 
-#main-nav a {
-    color: #fff;
+#main-nav a,
+#category-nav a {
+    color: #03010e;
 }
 
 #category-nav {
@@ -54,18 +58,11 @@ footer {
     font-size: 15px;
 }
 
-.nav-bg {
-    color: #fff;
-}
-
-#category-nav a {
-    color: #0A042A;
-}
-
 /* Footer styles */
 footer {
     margin-top: auto;
     min-height: 120px;
+    background-color: #0A042A;
 }
 
 footer a {

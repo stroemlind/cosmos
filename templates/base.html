@@ -26,20 +26,20 @@
     <header>
       <!-- Main navbar -->
       <div>
-        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-light" id="main-nav">
+        <nav class="navbar navbar-expand-md navbar-expand-sm navbar-light" id="main-nav">
           <div class="container-fluid">
             <a class="navbar-brand logo" href="{% url 'home' %}">COSMOS</a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                  <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'add-post' %}">Add Post</a>
+                  <a class="nav-link text-dark" href="{% url 'add-post' %}">Add Post</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
@@ -59,11 +59,15 @@
       </div>
       <div>
         <!-- Post Category navbar -->
-        <nav class="navbar navbar-expand-sm mb-0" id="category-nav">
+        <nav class="navbar navbar-expand-sm mb-4 mt-0 border-bottom border-top border-dark" id="category-nav">
           <div class="container-fluid">
+            <button class="navbar-toggler border border-dark btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span><i class="fal fa-chevron-double-down"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-md-3">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Music Categories
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -92,18 +96,19 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'category' %}?category=New Releases">New Releases</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=New Releases">New Releases</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'category' %}?category=Album Review">Album Reviews</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=Album Review">Album Reviews</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'category' %}?category=Music Video">Music Video</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=Music Video">Music Video</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="{% url 'popular_post' %}">Most Popular Post</a>
+                  <a class="nav-link" href="{% url 'popular_post' %}">Most Popular Post</a>
                 </li>
               </ul>
+            </div>
           </div>
         </nav>
       </div>
