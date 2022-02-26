@@ -24,9 +24,39 @@
                 </div>
                 <div class="col-md-8 col-sm-7">
                     <div class="card-body g-0">
-                        <div class="row g-0">
-                            <div class="col">
-                                <small class="text-muted">{{ post.category }}</small></p>
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4">
+                                <strong>
+                                    {% if user.is_authenticated %}
+                                    <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST" name="likeForm">
+                                        {% csrf_token %}
+                                        {% if liked %}
+                                        <button type="submit" value="{{post.pk}}" id="btn-like">
+                                            <i class="fas fa-heart"></i> 
+                                        </button>
+                                        {% else %}
+                                        <button type="submit" value="{{post.pk}}" id="btn-like">
+                                            <i class="far fa-heart"></i> 
+                                        </button>
+                                        {% endif %}
+                                    </form>
+                                    {% else %}
+                                    <span><i class="far fa-heart"></i> </span>
+                                    {% endif %}
+                                    <span>{{ post.number_of_likes }} </span>
+                                </strong>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                {% with comments.count as total_comments %}
+                                <strong><i class="far fa-comments"></i>
+                                    <span>{{ total_comments }}</span>
+                                </strong>
+                                {% endwith %}
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <strong class="d-inline"><span><i class="far fa-album-collection"></i></span>
+                                    <small>{{ post.category }}</small>
+                                </strong>
                             </div>
                         </div>
                         <div class="row g-0">
