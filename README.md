@@ -131,11 +131,8 @@ To build this project the following packages needs to be installed:
 </details>
 
 ## Testing
-### Code Validation
-### Browser Compatibility
-### Responsiveness
-### Tested User Stories
-### Unfixed Bugs
+To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
+
 ## Deployment
 ### Local Deployment
 ## Credits
