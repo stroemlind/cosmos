@@ -32,8 +32,8 @@ class PostForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={
                 'class': 'form-control',
-                'type': 'hidden'}
-                ),
+                # 'type': 'hidden'
+                }),
             'author': forms.TextInput(attrs={
                 'class': 'form-control',
                 'value': '',
