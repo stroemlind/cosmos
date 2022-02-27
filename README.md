@@ -79,7 +79,21 @@ If a user has made a post, they can delete that content if they desire to do so.
 The footer contains several Social Media Icons that are relevant to a music-oriented website. When a user clicks on one of the icons, the website related to the icons will open in a new tab. 
 
 ### Features Left to Implement
+#### A Profile page
+A profile page for users. This page could show relevant information like their post and their conversations. It could also display a list of posts with the status of draft. At the moment, a user can only post a post directly. If they change their mind and go back to another page of the site, that post will be unable to retrieve it.
+
+#### Edit and Delete Categories
+Another thing to implement would be the ability for users to edit and delete the comments they posted.
+
+#### Multiple categories 
+A user gets to choose to add multiple categories for a post to make it more visible for others and give the user a bigger chance to start a conversation.
+
+#### Better layout design for the forms
+Create better-looking forms for the login, log out and sign up page. The input fields should align with each other to get a better UX.
+
 ## Technologies Used (explain various tech used, such as HTML, CSS, Balsamiq, TinyPNG, Gitpod, GitHub, Git, etc.)
+
+
 ## Testing
 ### Code Validation
 ### Browser Compatibility
