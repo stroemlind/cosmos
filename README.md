@@ -124,11 +124,13 @@ These are the following technologies and packages used to develop this project:
 To build this project the following packages needs to be installed:
 <details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
 <p>
-| [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework |
+| Package  | Version | Description |
+| ------------- | ------------- | ------------- |
+| [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework|
 | dj_database_url | 0.5.0 | Utilizes the 12factor inspired DATABASE_URL environment variable to configure Django apps  |
 | [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) | 0.48.0 | An integrated Django application for addressing authentication, registration, account management, and social account authentication. |
 | [Cloudinary](https://cloudinary.com/) | 1.29.0 | A cloud-based storage for and uploading images and videos |
-| [Gunicorn](https://gunicorn.org/)  | 20.1.0 | Gunicorn is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The server is compatible with various web frameworks and light in server resources.  |
+| [Gunicorn](https://gunicorn.org/)  | 20.1.0 | Gunicorn is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The server is compatible with various web frameworks and light in server resources |
 | [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
 | [TinyMCE](https://www.tiny.cloud/)  | 3.4.0 | A cloud-based Rich-Text Editor to convert Html text areas to editor instances |
 </p>
