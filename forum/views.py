@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.db.models import Count
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 
@@ -17,12 +17,14 @@ from .forms import PostForm, CommentForm
 #     template_name = 'index.html'
 #     paginate_by = 12
 #     # category = Category.objects.all()
-# 
+#
 #     def get(self, request, *args, **kwargs):
 #        # post = post.filter(category__in=categories)
 #         category = request.GET.get("category")
-#         selected_category = Category.objects.filter(Category, category__name=category)
-# 
+#         selected_category = Category.objects.filter(
+#           Category,
+#           category__name=category)
+#
 #         context = {
 #             'post': post,
 #             'selected_category': selected_category
@@ -134,8 +136,8 @@ def add_comment(request, pk):
     """
     Function view to add comment to a post
     """
-    post = get_object_or_404(Post, pk=pk) # both post and comment_form are used by this func, whatever the method is
-    comment_form = CommentForm() # if the method is POST, comment_form will be updated, however
+    post = get_object_or_404(Post, pk=pk)  # both post and comment_form are used by this func, whatever the method is
+    comment_form = CommentForm()  # if the method is POST, comment_form will be updated, however
     # we can't rely on POST data here because we haven't yet established the method
     if request.method == 'POST':
         comment_form = CommentForm(request.POST, request.FILES)
@@ -144,8 +146,7 @@ def add_comment(request, pk):
             comment.post = post
             comment.save()
             # post_id = post.pk  # you don't need this as post_id is already post.pk (may need to check template for possible errors if you take this out)
-            return redirect('post-detail', pk
-            )
+            return redirect('post-detail', pk)
         # else: # you don't really need this else statement as it comes after a return, which will break from the code
     context = {
         'comment_form': comment_form,
@@ -174,7 +175,7 @@ class EditPost(generic.UpdateView):
 #             post = form.save()
 #             post_id = post.pk
 #             return redirect(get_post, post_id)
-# 
+#
 #     form = PostForm(instance=post)
 #     context = {
 #         'post': post,
