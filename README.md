@@ -91,8 +91,44 @@ A user gets to choose to add multiple categories for a post to make it more visi
 #### Better layout design for the forms
 Create better-looking forms for the login, log out and sign up page. The input fields should align with each other to get a better UX.
 
-## Technologies Used (explain various tech used, such as HTML, CSS, Balsamiq, TinyPNG, Gitpod, GitHub, Git, etc.)
+## Technologies Used
+These are the following technologies and packages used to develop this project:
 
+* [HTML](https://html.spec.whatwg.org/): HTML5 are used to build the core structure of the website
+
+* [CSS](https://www.w3.org/TR/css/): CSS is used to style the website with colors, fonts, placement of elements, etc.
+
+* [JavaScript](https://www.javascript.com/): JavaScript are used to make the website more interactive for the user
+
+* [Python](https://www.python.org/): Python is used to build the core structure and code for the project
+
+* [Heroku](https://www.heroku.com/home): Heroku is the deployment environment used to deploy the project and connected with the GitHub repository
+
+* [Gitpod](https://gitpod.io/): Gitpod is the development environment used for developing all the code during this project
+
+* [GitHub](https://github.com/): GitHub are used to store the repository for this project
+
+* [Git](https://atlassian.com/git/): Git is used to create backups of the project and ensure that all versions of the project is pushed to GitHub
+
+* [Canva](https://www.canva.com/): Canva is a web application used to create the wireframes for this project
+
+* [DevTools](https://developer.chrome.com/docs/devtools/): Dev Tools is used to look over the development of the website, debugging problems, and try different approaches to issues that would occur during the process. 
+
+* [Auto Prefixer](https://autoprefixer.github.io/): Auto Prefixer is an application used at the end of the project to give the CSS code some extra properties when used on different browsers.
+
+### Django packages
+To build this project the following packages needs to be installed:
+<details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
+<p>
+| [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework |
+| dj_database_url | 0.5.0 | Utilizes the 12factor inspired DATABASE_URL environment variable to configure Django apps  |
+| [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) | 0.48.0 | An integrated Django application for addressing authentication, registration, account management, and social account authentication. |
+| [Cloudinary](https://cloudinary.com/) | 1.29.0 | A cloud-based storage for and uploading images and videos |
+| [Gunicorn](https://gunicorn.org/)  | 20.1.0 | Gunicorn is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The server is compatible with various web frameworks and light in server resources.  |
+| [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
+| [TinyMCE](https://www.tiny.cloud/)  | 3.4.0 | A cloud-based Rich-Text Editor to convert Html text areas to editor instances |
+</p>
+</details>
 
 ## Testing
 ### Code Validation
