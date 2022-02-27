@@ -1,4 +1,5 @@
 # Cosmos
+"They say there are no sounds in space. So let's share and create some noise together with Cosmos."
 Cosmos is your number one source to go to if you want to discuss and connect with others through music.
 
 amiresponisive image
@@ -26,20 +27,23 @@ amiresponisive image
 
 * Deleting of created Content: As a Verified User, I get notified if I want to delete a post or comment I made and get a chance to regret it.
 
-## UX (briefly explain your design)
-The forum's design is minimalistic yet colorful to let the topics and posts speak for the website. Cosmos wants the user to feel like they are in an old record store with a modern twist.
+## UX 
+The forum's design is minimalistic yet a bit colorful to let the topics and posts speak for the website. Cosmos wants the user to feel like they are in a record store with a modern twist, refering to space.
 
-### Colour Scheme (explain your colors, etc.... perhaps use coolors.co?)
-The website's primary colors are Black, light grey, and white.
-The website's accent colors are (coming soon).
+### Colour Scheme
+The website's primary colors are Black, a drak blue and a bluish-white.
+The website's accent color are (coming soon).
 
-### Typography (explain any fonts and icon libraries used, font-awesome/google fonts, etc)
-* Headings/Menu/Footer/Comments: Montserrat subrayada
-* paragraph text: Quicksand
-* Logo: Modak
+### Typography
+* Headings/Menu/Footer/Comments: [Montserrat subrayada](https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts)
+* paragraph text: [Quicksand](https://fonts.google.com/specimen/Quicksand?query=quick)
+* Logo: [Modak](https://fonts.google.com/specimen/Modak?query=moda)
+* Icons: [FontAwsome]()
 
 The fonts for this project are minimalistic but still familiar to the user. The font Montserrat subrayada is used for the significant headings to create a clean and minimalistic feel to the website.
 The font Quicksand creates a soft, warm, and familiar feeling for the paragraph text.
+Modak gives a vintage feel, which is in great contrast to the other fonts' more modern feeling.
+The Icon used for like, comment and social media are from FontAwsome.
 
 ### Wireframes (include screenshots of your wireframes)
 
