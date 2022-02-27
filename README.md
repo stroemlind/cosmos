@@ -42,8 +42,42 @@ The fonts for this project are minimalistic but still familiar to the user. The 
 The font Quicksand creates a soft, warm, and familiar feeling for the paragraph text.
 
 ### Wireframes (include screenshots of your wireframes)
+
+
 ## Features
 ### Existing Features
+#### Menu/Navbar 
+The site has two different navbars at the top. The first navbar holds the links to the home page, the sign up to become a member, the login if you are already a member, and an add-post button will show if the member/user is active as a site user. The signup and login link will change to a logout link when the user is active on the site. 
+The menu is collapsable, so it becomes a hamburger menu when the screen size is 990px or lower.
+
+The second navbar holds the links to all the different categories that the post can have. So it is easier for the users to find posts and get involved in conversations about the topic of their interest. The genre link is a drop-down button that displays all the current genres available at the site.
+
+#### SignUp/LogIn/LogOut 
+To add a post and start a conversation, the user must become a site member. 
+To signup for the site, the user must create a username and password. When that user has a registered username and password, they can log in and out from the site as they like.
+
+#### View and create a post
+A visitor to the website can view all the posts made on the site. To add a post of their own, they must be a member. When creating a post, the user has to give it a title, choose a category, and write the desired content. The user can also upload a picture with the post.
+On the home page, users can see a list of the ten most-liked posts. In that way, users can find new artists, songs, or music genera they have never listened to before.
+
+#### Pagination
+The home page also shows the latest post made for the visitors. After fifteen posts, they can go forward to see more posts. The pagination also applies to the other pages for categories and most liked posts.
+
+#### View and post Comments
+A website user can see comments to a post and follow the conversation. If users want to post a comment themselves, they must be site members and logged in. To keep the tone of the discussion in the best way, they need to be approved by the admin or staff before users can see it displayed on the website.
+
+#### View Likes and like a post
+Any visitor to the website can see how many likes a post has, but a visitor must log in as a user to like a post.
+
+#### Editing content made
+A user can choose to edit a post they made. They can edit the title the comment's content and change the image. 
+
+#### Deleting content made
+If a user has made a post, they can delete that content if they desire to do so. If they decide to delete content, they will get a message to confirm if they really want to delete it.
+
+#### Footer with Social Media Icons
+The footer contains several Social Media Icons that are relevant to a music-oriented website. When a user clicks on one of the icons, the website related to the icons will open in a new tab. 
+
 ### Features Left to Implement
 ## Technologies Used (explain various tech used, such as HTML, CSS, Balsamiq, TinyPNG, Gitpod, GitHub, Git, etc.)
 ## Testing
