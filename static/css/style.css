@@ -55,6 +55,7 @@ nav li {
 /* Heroimage on 'home' page */
 #hero-image {
     /* animates zoom eeffect on loading page */
+    width: 100%;
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -64,10 +65,10 @@ nav li {
 
 @keyframes hero-zoom {
     from{
-        transform: scale(1);
+        transform: scale(0.9);
     }
     to{
-        transform: scale(1.3);
+        transform: scale(1);
     }
 }
 
