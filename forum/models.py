@@ -19,6 +19,7 @@ class Category(models.Model):
         return self.category_name
 
     def get_absolute_url(self):
+        """ Sets the absolut url to the home page """
         return reverse('home')
 
 
@@ -50,6 +51,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
+        """ Sets the absolut url to the home page """
         return reverse('home')
 
     def number_of_likes(self):

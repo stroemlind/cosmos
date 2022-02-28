@@ -151,3 +151,9 @@ class TestUserOnlyFunctions(TestCase):
         self.assertRedirects(response, f'/post/{post.id}')
         liked = Post.objects.get(id=post.id)
         self.assertFalse(liked.done)
+
+    # def test_slug_unique(self):
+    #     """ test """
+    #     post = Post.objects.get(id=1)
+    #     response = self.client.get(reverse('post-detail', args=(post.slug,)))
+    #     self.assertEqual(response.status_code, 200)
