@@ -34,10 +34,10 @@
         <nav class="navbar navbar-expand-md navbar-expand-sm navbar-light" id="main-nav">
           <div class="container-fluid">
             <a class="navbar-brand logo" href="{% url 'home' %}">COSMOS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAuth" aria-controls="navbarAuth" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarAuth">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="{% url 'home' %}" aria-label="Link to Home page(Open in the same tab)">Home</a>
@@ -56,8 +56,8 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'account_signup' %}" aria-label="Link to Sign Up (Open in the same tab)">Sign Up</a>
                 </li>
-              </ul>
                 {% endif %}
+              </ul>
             </div>
           </div>
         </nav>
@@ -66,10 +66,10 @@
         <!-- Post Category navbar -->
         <nav class="navbar navbar-expand-md navbar-expand-sm mb-4 mt-0 border-bottom border-top border-dark" id="category-nav">
           <div class="container-fluid">
-            <button class="navbar-toggler border border-dark text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border border-dark text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCategories" aria-controls="navbarCategories" aria-expanded="false" aria-label="Toggle navigation">
               Categories
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarCategories">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-md-3">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -101,13 +101,13 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'category' %}?category=New Releases" aria-label="Category link to New Releases (Open in the same tab)">New Releases</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=New_Releases" aria-label="Category link to New Releases (Open in the same tab)">New Releases</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'category' %}?category=Album Review" aria-label="Category link to Album Review(Open in the same tab)">Album Reviews</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=Album_Review" aria-label="Category link to Album Review(Open in the same tab)">Album Reviews</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'category' %}?category=Music Video" aria-label="Category link to Music Video(Open in the same tab)">Music Video</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=Music_Video" aria-label="Category link to Music Video(Open in the same tab)">Music Video</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'popular_post' %}" aria-label="Category link to Most Popular Post (Open in the same tab)">Most Popular Post</a>

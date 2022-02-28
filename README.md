@@ -139,8 +139,8 @@ To build this project the following packages needs to be installed:
 | [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
 | [TinyMCE](https://www.tiny.cloud/)  | 3.4.0 | A cloud-based Rich-Text Editor to convert Html text areas to editor instances |
 
- (((The [requirements.txt](requirements.txt) command for the installed packages is:
-- `pip3 install -r requirements.txt`)))
+The [requirements.txt](requirements.txt) command for the installed packages is:
+- `pip3 install -r requirements.txt`
 
 </details>
 

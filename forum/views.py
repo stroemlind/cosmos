@@ -3,6 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.db.models import Count
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 
@@ -73,13 +75,17 @@ def category_page(request):
     )
 
 
+@login_required
 def add_post(request):
     """
     Function to add a post to the forum
     """
+    user = get_object_or_404(User, username=request.user)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
+            print('is valid')
+            form.author = user
             post = form.save()
             post_id = post.pk
             return redirect(get_post, post_id)
@@ -91,6 +97,7 @@ def add_post(request):
     return render(request, 'add_post.html', context)
 
 
+@login_required
 def add_comment(request, pk):
     """
     Function view to add comment to a post
@@ -111,15 +118,7 @@ def add_comment(request, pk):
     return render(request, 'add_comment.html', context)
 
 
-class EditPost(generic.UpdateView):
-    """
-    The class to edit a post
-    """
-    model = Post
-    template_name = 'edit_post.html'
-    fields = ['title', 'image', 'content']
-
-
+@login_required
 def edit_post(request, pk):
     """
     Function to add a post to the forum

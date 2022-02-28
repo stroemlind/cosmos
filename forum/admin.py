@@ -6,7 +6,7 @@ class PostAdmin(admin.ModelAdmin):
     """
     A class to prepopulate slug-fileds
     """
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ('title', 'author', 'category')
 
 
 @admin.register(Comment)
