@@ -120,6 +120,26 @@ class EditPost(generic.UpdateView):
     fields = ['title', 'image', 'content']
 
 
+def edit_post(request, pk):
+    """
+    Function to add a post to the forum
+    """
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            # form.image = request.FILES.get('image')
+            # print(form)
+            # print(request.POST)
+            form.save()
+            return redirect(get_post, post.pk)
+    else:
+        form = PostForm(instance=post)
+    context = {
+        'form': form
+    }
+    return render(request, 'edit_post.html', context)
+
 # class EditComment(generic.UpdateView):
 #     """ test """
 #     model = Comment
