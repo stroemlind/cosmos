@@ -40,7 +40,7 @@ The website's primary colors are:
 * Headings/Menu/Footer/Comments: [Montserrat subrayada](https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts)
 * paragraph text: [Quicksand](https://fonts.google.com/specimen/Quicksand?query=quick)
 * Logo: [Modak](https://fonts.google.com/specimen/Modak?query=moda)
-* Icons: [FontAwsome]()
+* Icons: [FontAwsome](https://fontawesome.com/)
 
 The fonts for this project are minimalistic but still familiar to the user. The font Montserrat subrayada is used for the significant headings to create a clean and minimalistic feel to the website.
 The font Quicksand creates a soft, warm, and familiar feeling for the paragraph text.
