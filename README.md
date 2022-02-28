@@ -140,7 +140,21 @@ To build this project the following packages needs to be installed:
 To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
+
+ (((The [requirements.txt](requirements.txt) command for the installed packages is:
+- `pip3 install -r requirements.txt`)))
+
+The live link can be found here - [https://cosmos.herokuapp.com/](https://cosmos.herokuapp.com/)
+
 ### Local Deployment
+In order to make a local copy of this project, you can type the following into your IDE Terminal to clone this repository:
+
+- `git clone https://github.com/stroemlind/cosmos.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/stroemlind/cosmos)
+
 ## Credits
 ### Content
 ### Media
