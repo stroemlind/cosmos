@@ -3,33 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.db.models import Count
-# from django.core.paginator import Paginator
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
-
-# Create your views here.
-# class PostList(View):
-#     """
-#     The class to display all the post in the forum
-#     """
-#     model = Post
-#     queryset = Post.objects.filter(status=1).order_by('-created_on')
-#     template_name = 'index.html'
-#     paginate_by = 12
-#     # category = Category.objects.all()
-#
-#     def get(self, request, *args, **kwargs):
-#        # post = post.filter(category__in=categories)
-#         category = request.GET.get("category")
-#         selected_category = Category.objects.filter(
-#           Category,
-#           category__name=category)
-#
-#         context = {
-#             'post': post,
-#             'selected_category': selected_category
-#         }
-#         return render(request, 'index.html', context)
 
 
 def home_view(request):
@@ -38,9 +13,6 @@ def home_view(request):
     one first. Alls sets the links in the category navbar
     """
     post = Post.objects.filter(status=1).order_by('-created_on')
-    # paginator = Paginator(post, 12)
-    # page = request.GET.get('page')
-    # page_obj = paginator.get_page(page)
     categories = None
 
     if request.GET:
@@ -48,26 +20,16 @@ def home_view(request):
             categories = request.GET['category']
             post = post.filter(category__in=categories)
             categories = Category.objects.filter(category_name__in=categories)
-            # paginator = Paginator(Post.objects.filter(status=1).order_by(
-            #     '-created_on'), 12)
-            # page = request.GET.get('page')
-            # page_obj = paginator.get_page(page)
 
         context = {
             'post': post,
             'current_categories': categories,
-            # 'page_obj': page_obj
         }
         return render(request, 'category.html', context)
-
-    # paginator = Paginator(post, 12)
-    # page = request.GET.get('page')
-    # page_obj = paginator.get_page(page)
 
     context = {
         'post': post,
         'current_categories': categories,
-        # 'page_obj': page_obj
     }
 
     return render(request, 'index.html', context)
@@ -103,8 +65,6 @@ def category_page(request):
     """
     category = request.GET.get("category")
     category_post = Post.objects.filter(category=category)
-    # for post in list(category_post):
-    #     print(f"POST: {post}")
     template = 'category.html'
     return render(request, template, {
         'category': category,
@@ -119,7 +79,6 @@ def add_post(request):
     """
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
-        # context['posted'] = form.instance
         if form.is_valid():
             post = form.save()
             post_id = post.pk
@@ -136,18 +95,15 @@ def add_comment(request, pk):
     """
     Function view to add comment to a post
     """
-    post = get_object_or_404(Post, pk=pk)  # both post and comment_form are used by this func, whatever the method is
-    comment_form = CommentForm()  # if the method is POST, comment_form will be updated, however
-    # we can't rely on POST data here because we haven't yet established the method
+    post = get_object_or_404(Post, pk=pk)
+    comment_form = CommentForm()
     if request.method == 'POST':
         comment_form = CommentForm(request.POST, request.FILES)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            # post_id = post.pk  # you don't need this as post_id is already post.pk (may need to check template for possible errors if you take this out)
             return redirect('post-detail', pk)
-        # else: # you don't really need this else statement as it comes after a return, which will break from the code
     context = {
         'comment_form': comment_form,
         'post': post,
@@ -170,7 +126,7 @@ class EditPost(generic.UpdateView):
 #     template_name = 'edit_comment.html'
 #     fields = ['body']
 #     post = Post.objects.get(id)
-# 
+#
 #     def form_valid(self, form):
 #         form.instance.user = self.request.user
 #         return super(post, self)
@@ -188,13 +144,13 @@ class EditPost(generic.UpdateView):
 #             form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
 #         else:
 #             form = CommentForm(data=request.POST)
-#    
+#
 #         form = CommentForm(request.POST)
 #         if form.is_form():
 #             comment = form.save(commit=False)
 #             comment.save()
 #             return redirect('post-detail', pk)
-# 
+#
 #     context = {
 #         'post': post,
 #         'form': form
