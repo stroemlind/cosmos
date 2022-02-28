@@ -1,4 +1,6 @@
 from django.test import TestCase
+from django.contrib.auth.models import User
+from django.urls import reverse
 from .models import Post, Comment, Category
 
 
@@ -8,17 +10,29 @@ class TestPostModel(TestCase):
     """
     @classmethod
     def setUpTestData(cls):
+        test_user1 = User.objects.create_user(
+            username='testuser1',
+            password='3E!uhGre09Wq'
+            )
+
+        test_user1.save()
+
         Post.objects.create(
-            title='Blog Post Test',
-            slug='blog-post-test',
-            author='TestUser',
-            status='1',
-            likes='True',
+            title='Test title',
+            slug='test-title',
+            author=test_user1,
+            category='test',
+            image='placeholder',
+            updated_on='2022.02.28',
+            content='test text body',
+            created_on='2022.02.27',
+            status=1,
+            # likes=likes.set(True)
             )
 
     def test_status_default_published(self):
         """ Test if status is 1 when post are made """
-        post = Post.objects.create(name='Test Post')
+        post = Post.objects.get(id=1)
         self.assertEqual(post, 1)
 
     def test_title_max_length(self):
@@ -30,48 +44,54 @@ class TestPostModel(TestCase):
     def test_slug_max_length(self):
         """ test """
         post= Post.objects.get(id=1)
-        max_length = post_meta.get_field('slug').max_length
+        max_length = post._meta.get_field('slug').max_length
         self.assertEqual(max_length, 200)
-
-    def test_slug_unique(self):
-        """ test """
-        post = Post.objects.get(id=1)
-        response = self.client.get(reverse('post-detail', args=(post.slug,)))
-        self.assertEqual(response.status_code, 200)
 
     def test_author_name(self):
         """ test """
         post = Post.objects.get(id=1)
-        field_label = post._meta.get_field('author').verbose_name
+        field_label = post._meta.get_field('author')
         self.assertEqual(field_label, 'author')
-
-    def test_object_title_str(self):
-        """ test """
-        post = Post.objects.get(id=1)
-        expected_object_title = self.title
-        self.assertEqual(str(post), expected_object_name)
 
     def test_get_absolute_url(self):
         """ test """
         post = Post.objects.get(id=1)
-        self.assertEqual(post.get_absolute_url(), 'home')
+        self.assertEqual(post.get_absolute_url(), '/')
 
 
 class TestCommentModel(TestCase):
     """ Test Comment model """
     @classmethod
     def setUpTestData(cls):
-        Comment.objects.create(
-            user='TestUser',
-            body='A test comment',
-            approved='False',
+        test_user1 = User.objects.create_user(
+            username='testuser1',
+            password='3E!uhGre09Wq'
             )
 
-    def test_object_comment_body_by_user_str(self):
-        """ test """
-        comment = Comment.objects.get(id=1)
-        expected_object_str = f'Comment: {self.body} By: {self.user}'
-        self.assertEqual(str(comment), expected_object_str)
+        test_user1.save()
+
+        test_post = Post.objects.create(
+            title='Test title',
+            slug='test-title',
+            author=test_user1,
+            category='test',
+            image='placeholder',
+            updated_on='2022.02.28',
+            content='test text body',
+            created_on='2022.02.27',
+            status=1,
+            # likes=likes.set(True)
+            )
+
+        test_post.save()
+
+        Comment.objects.create(
+            user=test_user1,
+            post=test_post,
+            body='test comment body',
+            created_on='2022.02.28',
+            approved='False'
+        )
 
     def test_default_approved_are_false(self):
         """ test """
@@ -90,10 +110,10 @@ class TestCategoryModel(TestCase):
     def test_get_absolute_url(self):
         """ test """
         category = Category.objects.get(id=1)
-        self.assertEqual(category.get_absolute_url(), 'home')
+        self.assertEqual(category.get_absolute_url(), '/')
 
     def test_category_name_max_length(self):
         """ test """
         category = Category.objects.get(id=1)
-        max_length = category_meta.get_field('category_name').max_length
+        max_length = category._meta.get_field('category_name').max_length
         self.assertEqual(max_length, 40)
