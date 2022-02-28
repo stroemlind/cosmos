@@ -12,11 +12,11 @@
             <div class="row g-0">
                 <div class="col-md-4 col-sm-5">
                     {% if "placeholder" in post.image.url %}
-                    <a href="{% url 'post-detail' post.pk %}">
+                    <a href="{% url 'post-detail' post.pk %}" aria-label="Link to the post through image (Open in the same tab)">
                         <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="card-img rounded-start" alt="Images of text logo with a background of space">
                     </a>
                     {% else %}
-                    <a href="{% url 'post-detail' post.pk %}">
+                    <a href="{% url 'post-detail' post.pk %}" aria-label="Link to the post through image (Open in the same tab)">
                         <img src="{{ post.image.url }}" alt="" width="100%" class="card-img rounded-start">
                     </a>
                     {% endif %} 
@@ -30,7 +30,7 @@
                         </div>
                         <div class="row g-0">
                             <div class="col">
-                                <h5 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="post-title">{{ post.title }}</a></h5>
+                                <h5 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="post-title" aria-label="Link to the post (Open in the same tab)">{{ post.title }}</a></h5>
                             </div>
                         </div>
                         <div class="row g-0">
@@ -59,15 +59,15 @@
             <div class="card-body">
                 <h4 class="card-title">Ooops...</h4>
                 <p class="card-text">We are sorry, but there are only silence here... But you could be the first one to make som noise!
-                    <a href="{% url 'account_login' %}" class="text-muted">Log in here</a> 
+                    <a href="{% url 'account_login' %}" class="text-muted" aria-label="Link to Log in page (Open in the same tab)">Log in here</a> 
                     if your are not already, be the one to add an entery:
-                    <a href="{% url 'add-post' %}" class="text-muted">Here,</a>
+                    <a href="{% url 'add-post' %}" class="text-muted" aria-label="Link to Add post page(Open in the same tab)">Here,</a>
                     if you are a member OR become one
-                    <a href="{% url 'account_signup' %}" class="text-muted">Here</a>!
+                    <a href="{% url 'account_signup' %}" class="text-muted" aria-label="Link to Sign Up page (Open in the same tab)">Here</a>!
                 </p>
             </div>
             <div class="text-center pt-2">
-                <a href="{% url 'home' %}" class="btn btn-dark">Back to Home</a>
+                <a href="{% url 'home' %}" class="btn btn-dark" aria-label="Link to Home page (Open in the same tab)">Back to Home</a>
             </div>
         </div>
     </div>

@@ -14,11 +14,11 @@
             <div class="row g-0">
                 <div class="col-md-4 col-sm-5">
                     {% if "placeholder" in post.image.url %}
-                    <a href="{% url 'post-detail' post.pk %}">
+                    <a href="{% url 'post-detail' post.pk %}" aria-label="A link to the post through the post image (Open in the same tab)">
                         <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="card-img rounded-start" alt="Images of text logo with a background of space">
                     </a>
                     {% else %}
-                    <a href="{% url 'post-detail' post.pk %}">
+                    <a href="{% url 'post-detail' post.pk %}" aria-label="A link to the post through the post image (Open in the same tab)">
                         <img src="{{ post.image.url }}" alt="" width="100%" class="card-img rounded-start">
                     </a>
                     {% endif %} 

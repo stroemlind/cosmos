@@ -40,21 +40,21 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                  <a class="nav-link" aria-current="page" href="{% url 'home' %}" aria-label="Link to Home page(Open in the same tab)">Home</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link text-dark" href="{% url 'add-post' %}">Add Post</a>
+                  <a class="nav-link text-dark" href="{% url 'add-post' %}" aria-label="Link to Add Post (Open in the same tab)">Add Post</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                  <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Link to Log Out (Open in the same tab)">Log Out</a>
                 </li>
                 {% else %}
                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
+                  <a class="nav-link" href="{% url 'account_login' %}" aria-label="Link to Log In (Open in the same tab)">Log In</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                  <a class="nav-link" href="{% url 'account_signup' %}" aria-label="Link to Sign Up (Open in the same tab)">Sign Up</a>
                 </li>
               </ul>
                 {% endif %}
@@ -76,41 +76,41 @@
                     Music Categories
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Afron">Afro</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category'%}?category=Blues">Blues</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Christmas">Christmas</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Classic">Classic</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Country">Country</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Disco">Disco</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=EDM">EDM</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Folk">Folk</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Funk">Funk</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=HipHop">HipHop</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Indie">Indie</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Jazz">Jazz</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=K-Pop">K-Pop</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Latino">Latino</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Metal">Metal</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Pop">Pop</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Punk">Punk</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Rap">Rap</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Reggae">Reggae</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=RnB">RnB</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Rock">Rock</a></li>
-                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Soul">Soul</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Afron" aria-label="Category link to Afro(Open in the same tab)">Afro</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category'%}?category=Blues" aria-label="Category link to Blues(Open in the same tab)">Blues</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Christmas" aria-label="Category link to Christmas (Open in the same tab)">Christmas</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Classic" aria-label="Category link to Classic(Open in the same tab)">Classic</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Country" aria-label="Category link to Country(Open in the same tab)">Country</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Disco" aria-label="Category link to Disco(Open in the same tab)">Disco</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=EDM" aria-label="Category link to EDM (Open in the same tab)">EDM</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Folk" aria-label="Category link to Folk(Open in the same tab)">Folk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Funk" aria-label="Category link to Funk(Open in the same tab)">Funk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=HipHop" aria-label="Category link to HipHop (Open in the same tab)">HipHop</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Indie" aria-label="Category link to Indie(Open in the same tab)">Indie</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Jazz" aria-label="Category link to Jazz(Open in the same tab)">Jazz</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=K-Pop" aria-label="Category link to K-Pop(Open in the same tab)">K-Pop</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Latino" aria-label="Category link to Latino(Open in the same tab)">Latino</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Metal" aria-label="Category link to Metal(Open in the same tab)">Metal</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Pop" aria-label="Category link to Pop(Open in the same tab)">Pop</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Punk" aria-label="Category link to Punk(Open in the same tab)">Punk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Rap" aria-label="Category link to Rap(Open in the same tab)">Rap</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Reggae" aria-label="Category link to REggae(Open in the same tab)">Reggae</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=RnB" aria-label="Category link to RnB (Open in the same tab)">RnB</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Rock" aria-label="Category link to Rock (Open in the same tab)">Rock</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' %}?category=Soul" aria-label="Category link to Soul (Open in the same tab)">Soul</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'category' %}?category=New Releases">New Releases</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=New Releases" aria-label="Category link to New Releases (Open in the same tab)">New Releases</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'category' %}?category=Album Review">Album Reviews</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=Album Review" aria-label="Category link to Album Review(Open in the same tab)">Album Reviews</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'category' %}?category=Music Video">Music Video</a>
+                  <a class="nav-link" href="{% url 'category' %}?category=Music Video" aria-label="Category link to Music Video(Open in the same tab)">Music Video</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'popular_post' %}">Most Popular Post</a>
+                  <a class="nav-link" href="{% url 'popular_post' %}" aria-label="Category link to Most Popular Post (Open in the same tab)">Most Popular Post</a>
                 </li>
               </ul>
             </div>

@@ -8,6 +8,7 @@ from tinymce.models import HTMLField
 # Create your models here.
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
+
 class Category(models.Model):
     """
     The model for all the categories
@@ -19,6 +20,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('home')
+
 
 class Post(models.Model):
     """

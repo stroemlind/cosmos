@@ -9,11 +9,11 @@
             <div class="row g-0">
                 <div class="col-md-4 col-sm-5">
                     {% if "placeholder" in post.image.url %}
-                    <a href="{% url 'post-detail' post.pk %}">
+                    <a href="{% url 'post-detail' post.pk %}" aria-label="Link to the post through image (Open in the same tab)">
                         <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="img-fluid rounded-start" alt="Images of text logo with a background of space">
                     </a>
                     {% else %}
-                    <a href="{% url 'post-detail' post.pk %}">
+                    <a href="{% url 'post-detail' post.pk %}" aria-label="Link to the post through imageb(Open in the same tab)">
                         <img src="{{ post.image.url }}" alt="" width="100%">
                     </a>
                     {% endif %} 
@@ -65,7 +65,7 @@
         <ul class="pagination justify-content-evenly" id="page-btn">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link previous rounded-1">
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link previous rounded-1" aria-label="Link to the previous page (Open in the same tab)">
                     <span aria-hidden="true">&laquo;</span>
                     <span class="sr-only">Previous</span>
                     BACK
@@ -74,7 +74,7 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li>
-                <a href="?page={{ page_obj.next_page_number }}" class="page-link next rounded-1">NEXT
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link next rounded-1" aria-label="Link to next page (Open in the same tab)">NEXT
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">Next</span>
                 </a>
