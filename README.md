@@ -47,7 +47,7 @@ The font Quicksand creates a soft, warm, and familiar feeling for the paragraph 
 Modak gives a vintage feel, which is in great contrast to the other fonts' more modern feeling.
 The Icon used for like, comment and social media are from FontAwsome.
 
-### Wireframes (include screenshots of your wireframes)
+### Wireframes
 
 
 ## Features
@@ -97,6 +97,9 @@ A user gets to choose to add multiple categories for a post to make it more visi
 #### Better layout design for the forms
 Create better-looking forms for the login, log out and sign up page. The input fields should align with each other to get a better UX.
 
+#### Hero image
+Make the current Hero image a carousel with posts or pictures related to new music. 
+
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
 
@@ -125,7 +128,7 @@ These are the following technologies and packages used to develop this project:
 ### Django packages
 To build this project the following packages needs to be installed:
 <details><summary>CLICK HERE to expand the full requirements.txt file details</summary>
-<p>
+
 | Package  | Version | Description |
 | ------------- | ------------- | ------------- |
 | [Django](https://www.djangoproject.com/) | 3.2 | The Django Framework|
@@ -135,16 +138,18 @@ To build this project the following packages needs to be installed:
 | [Gunicorn](https://gunicorn.org/)  | 20.1.0 | Gunicorn is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The server is compatible with various web frameworks and light in server resources |
 | [Psycopg2](https://www.psycopg.org/docs/) | 2.9.3 | A PostgreSQL database adapter for the Python programming language |
 | [TinyMCE](https://www.tiny.cloud/)  | 3.4.0 | A cloud-based Rich-Text Editor to convert Html text areas to editor instances |
-</p>
+
+ (((The [requirements.txt](requirements.txt) command for the installed packages is:
+- `pip3 install -r requirements.txt`)))
+
 </details>
+
 
 ## Testing
 To view all tests for this project, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
- (((The [requirements.txt](requirements.txt) command for the installed packages is:
-- `pip3 install -r requirements.txt`)))
 
 The live link can be found here - [https://cosmos.herokuapp.com/](https://cosmos.herokuapp.com/)
 
