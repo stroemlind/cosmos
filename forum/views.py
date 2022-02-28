@@ -128,9 +128,7 @@ def edit_post(request, pk):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
-            # form.image = request.FILES.get('image')
-            # print(form)
-            # print(request.POST)
+            form.author = post.author
             form.save()
             return redirect(get_post, post.pk)
     else:

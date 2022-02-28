@@ -21,7 +21,6 @@ class PostForm(forms.ModelForm):
         fields = (
             'title',
             'slug',
-            'author',
             'image',
             'category',
             'content',
@@ -33,12 +32,6 @@ class PostForm(forms.ModelForm):
             'slug': forms.TextInput(attrs={
                 'class': 'form-control',
                 # 'type': 'hidden'
-                }),
-            'author': forms.TextInput(attrs={
-                'class': 'form-control',
-                'value': '',
-                'id': 'author-id',
-                'type': 'hidden'
                 }),
             'image': forms.FileInput(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={
