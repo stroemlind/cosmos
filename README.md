@@ -159,5 +159,52 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 ## Credits
 ### Content
+For an overall start of the project:
+* [CodeMy](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+
+For integrating and installing TinyMCE text editor:
+* [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-integrate-custom-rich-text-editor-in-your-django-website/)
+* [TinyMCE](https://www.tiny.cloud/docs/quick-start/)
+* [TinmyMCE Django](https://www.tiny.cloud/docs/integrations/django/)
+
+For footer design:
+* [MdBootstrap](https://mdbootstrap.com/docs/standard/navigation/footer/)
+
+For pagination:
+* [Webnots](https://www.webnots.com/bootstrap-pagination-tutorial/)
+* [Django Projetc](https://docs.djangoproject.com/en/4.0/topics/pagination/)
+* [Ordinary Coders](https://ordinarycoders.com/blog/article/django-pagination)
+* Nafeesah Younis[GitHub](https://github.com/nafeesahyounis/django-test-blog/blob/master/blog/views.py) and post on [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1609281135242700)
+
+For footer:
+* [Stackoverflow](https://stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page)
+
+Populate Slugfiled in add_post.html form
+* [The Net Ninja](https://www.youtube.com/watch?v=qO1bgMG7sO8)
+
+Like-button 
+* [Dev.to](https://dev.to/radualexandrub/how-to-add-like-unlike-button-to-your-django-blog-5gkg)
+* [I think therefor I blog]()
+
+For Comments:
+* [Django Central](https://djangocentral.com/creating-comments-system-with-django/)
+* [Data-Flair](https://data-flair.training/blogs/discussion-forum-python-django/)
+* Tutor Ed from Code Institute
+
+For Most liked page:
+* [Stackoweflow](https://stackoverflow.com/questions/65944103/django-order-by-highest-number-of-likes-in-homepage)
+
+Category navbar: 
+* Tutor Scott from Code Institute 
+* [Boutique Aldo](https://github.com/Code-Institute-Solutions/boutique_ado_v1) walkthrough lessons and githubfiles
+
+Max length of words shown in blog post on index page:
+* [Django Projects](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#truncatechars-html)
+
 ### Media
+* Post Images used during development are created from these pexels images: 
+ * [Image one](https://www.pexels.com/sv-se/foto/himmel-natt-rymden-galaxy-956981/)
+
+ * [Image two](https://www.pexels.com/sv-se/foto/himmel-natt-rymden-mork-1252890/)
+
 ### Acknowledgements
