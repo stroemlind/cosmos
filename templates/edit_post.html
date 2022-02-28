@@ -55,5 +55,9 @@
 {% endif %}
 
 <script src="{% static 'js/script.js' %}"></script>
+<script>
+    var name = '{{ user.id }}';
+    document.getElementById('author-id').value = name;
+</script>
 
 {% endblock %}

@@ -84,7 +84,6 @@ def add_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            print('is valid')
             form.author = user
             post = form.save()
             post_id = post.pk
