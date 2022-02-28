@@ -164,19 +164,37 @@ class EditPost(generic.UpdateView):
     fields = ['title', 'image', 'content']
 
 
-# def edit_post(request, pk):
+# class EditComment(generic.UpdateView):
+#     """ test """
+#     model = Comment
+#     template_name = 'edit_comment.html'
+#     fields = ['body']
+#     post = Post.objects.get(id)
+# 
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super(post, self)
+
+
+# def edit_comment(request, pk, id):
 #     """
 #     Function to add a post to the forum
 #     """
 #     post = get_object_or_404(Post, pk=pk)
+#     form = CommentForm(instance=Comment.objects.get(id=comment_id)
 #     if request.method == 'POST':
-#         form = PostForm(request.POST, instance=post)
-#         if form.is_valid():
-#             post = form.save()
-#             post_id = post.pk
-#             return redirect(get_post, post_id)
-#
-#     form = PostForm(instance=post)
+#         form = CommentForm(instance=Comment.objects.get(id=comment_id)
+#         if comment_id:
+#             form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
+#         else:
+#             form = CommentForm(data=request.POST)
+#    
+#         form = CommentForm(request.POST)
+#         if form.is_form():
+#             comment = form.save(commit=False)
+#             comment.save()
+#             return redirect('post-detail', pk)
+# 
 #     context = {
 #         'post': post,
 #         'form': form
