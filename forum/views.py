@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.db.models import Count
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .models import Post, Category, Comment
+from .models import Post, Category
 from .forms import PostForm, CommentForm
 
 
@@ -136,43 +136,6 @@ def edit_post(request, pk):
         'form': form
     }
     return render(request, 'edit_post.html', context)
-
-# class EditComment(generic.UpdateView):
-#     """ test """
-#     model = Comment
-#     template_name = 'edit_comment.html'
-#     fields = ['body']
-#     post = Post.objects.get(id)
-#
-#     def form_valid(self, form):
-#         form.instance.user = self.request.user
-#         return super(post, self)
-
-
-# def edit_comment(request, pk, id):
-#     """
-#     Function to add a post to the forum
-#     """
-#     post = get_object_or_404(Post, pk=pk)
-#     form = CommentForm(instance=Comment.objects.get(id=comment_id)
-#     if request.method == 'POST':
-#         form = CommentForm(instance=Comment.objects.get(id=comment_id)
-#         if comment_id:
-#             form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
-#         else:
-#             form = CommentForm(data=request.POST)
-#
-#         form = CommentForm(request.POST)
-#         if form.is_form():
-#             comment = form.save(commit=False)
-#             comment.save()
-#             return redirect('post-detail', pk)
-#
-#     context = {
-#         'post': post,
-#         'form': form
-#     }
-#     return render(request, 'edit_post.html', context)
 
 
 class DeletePost(generic.DeleteView):

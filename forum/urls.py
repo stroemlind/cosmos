@@ -14,6 +14,4 @@ urlpatterns = [
     path('like/<int:pk>', views.LikeView.as_view(), name='post_like'),
     path('post/<int:pk>/add-comment/', views.add_comment, name='add-comment'),
     path('popular_post/', views.MostLikedPost.as_view(), name='popular_post'),
-    # path('comment/<int:pk>/edit-comment/', views.EditComment.as_view(), name='edit-comment'),
-    # path('post/<int:pk>/edit/<comment_id>', views.edit_comment, name='edit-comment'),
 ]
