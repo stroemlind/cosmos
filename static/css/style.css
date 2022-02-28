@@ -6,9 +6,6 @@ font-family: 'Quicksand', sans-serif;*/
 
 body {
     background-color: rgb(252, 251, 255);
-    /*background-image: url(https://res.cloudinary.com/elistr/image/upload/v1645866390/pexels-felix-mittermeier-956981_2_bs7jpj.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -56,19 +53,35 @@ nav li {
 #hero-image {
     /* animates zoom eeffect on loading page */
     width: 100%;
-    animation-name: hero-zoom;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: hero-zoom;
+            animation-name: hero-zoom;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
 /* created the level of zoom for hero image */
 
-@keyframes hero-zoom {
+@-webkit-keyframes hero-zoom {
     from{
-        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
     }
     to{
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes hero-zoom {
+    from{
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+    }
+    to{
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 }
 
@@ -116,7 +129,7 @@ footer a {
 }
 
 #page-btn a:hover {
-    background-color: #e92f00;
+    background-color: #0A042A;
     color: #fff;
     text-decoration: none;
 }

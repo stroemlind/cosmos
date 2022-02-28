@@ -31,8 +31,10 @@ amiresponisive image
 The forum's design is minimalistic yet a bit colorful to let the topics and posts speak for the website. Cosmos wants the user to feel like they are in a record store with a modern twist, refering to space.
 
 ### Colour Scheme
-The website's primary colors are Black, a drak blue and a bluish-white.
-The website's accent color are (coming soon).
+The website's primary colors are:
+* Black  
+* different kinds of dark blue
+* a bluish-white(rgb(252, 251, 255)) 
 
 ### Typography
 * Headings/Menu/Footer/Comments: [Montserrat subrayada](https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts)
