@@ -269,13 +269,20 @@ The Social Media Icons in the footer takes the User to that icon's Social Media 
 If a User clicks on the Logo below the Social Media Icons, they get redirected to the Cosmos home page.
 
 ![Footer](documentation/testing/footer.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+
+![WindowWithTabs](documentation/testing/socialmtab.png)
+
+![Spotify](documentation/testing/spotify.png)
+
+![Facebook](documentation/testing/facebook.png)
+
+![Twitter](documentation/testing/twitter.png)
+
+![Instagram](documentation/testing/instagram.png)
+
+![SoundCloud](documentation/testing/soundc.png)
+
+![Youtube](documentation/testing/youtube.png)
 
 ### Unfixed Bugs
 * Pagination
