@@ -12,9 +12,9 @@
                         <hr>
                         <form action="{% url 'delete-post' post.pk %}" method="POST">
                             {% csrf_token %}
-                            <h4>Are you sure you want to delete this post?</h4>
+                            <h2>Are you sure you want to delete this post?</h2>
                             <a href="{% url 'post-detail' post.pk %}" class="btn btn-dark mt-2 mx-2" aria-label="Link to Home page (Open in the same tab)">No, take me Back!</a>
-                            <button type="submit" class="btn btn-outline-dark mt-2">Yes, Delete it!</button> 
+                            <button type="submit" class="btn btn-outline-dark mt-2" name="submit">Yes, Delete it!</button> 
                         </form>
                     </div>
                 </div>

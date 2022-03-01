@@ -14,7 +14,7 @@
                     <form action="{% url 'add-comment' post.pk %}" method="POST">
                         {% csrf_token %}
                         {{ comment_form }}  
-                        <button type="submit" class="btn btn-outline-dark mt-2">Share Comment</button> 
+                        <button type="submit" class="btn btn-outline-dark mt-2" name="submit">Share Comment</button> 
                     </form>
                 </div>
             </div>   
