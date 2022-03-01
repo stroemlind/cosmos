@@ -147,8 +147,8 @@ An Unverified User/Visitor can only read posts.
   ![ReadPost3](documentation/testing/not-user-post.png)
   ![ReadPost4](documentation/testing/un-comments.png)
 
-  Add post
-  ![AddPost2](documentation/testing/.png)
+  Add post: The User gets redirected to the Log In page
+  ![AddPost2](documentation/testing/tablet-3.png)
 
   Edit post
   ![EditPost2](documentation/testing/no-edit.png)
@@ -167,13 +167,13 @@ A verified User/Admin can navigate through the category options available from t
 * Post Comments: 
 A Verified User/Admin can leave comments on posts to start or participate in conversations.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![AddComment](documentation/testing/add-comment.png)
+![CommentViewAsVerified](documentation/testing/comment-section.png)
 
 * View Comments: 
-Any Visitor to the website can view comments on different posts and read the conversation. 
+Any Visitor to the website can view comments on different posts and read the conversation. Note that if the User is not Verified, the 'Join in' button do not appear.
 
-![](documentation/testing/.png)
+![ViewComment](documentation/testing/viewcommentnon.png)
 
 * Like/Vote/Unlike: 
 A Verified User/Admin can Like/Vote and Unlike a post to show their interest in the subject.
