@@ -5,7 +5,7 @@ Cosmos is your number one source to go to if you want to discuss and connect wit
 amiresponisive image
 
 ## User Stories
-* Create Posts: As a Verified User/Admin, I can create, read, edit and delete posts about music I like and start conversations with other users.
+* Create Posts: As a Verified User/Admin, I can create, read, edit and delete posts about music I like and start conversations with other Users.
 
 * Choose Category: As a Verified User/Admin, I can choose among different categories to quickly find the relevant post of interest.
 
@@ -21,14 +21,14 @@ amiresponisive image
 
 * View popular posts: As a User/Admin, I can view a list of the post with the most Likes/Votes to see which posts are the most popular.
 
-* Account Registration: As a User, I can create a user profile to use the website's functionalities.
+* Account Registration: As a User, I can create a User profile to use the website's functionalities.
 
 * Approve Comments: As Admin of the web application, I can approve or disapprove of comments to filter out objectionable comments.
 
 * Deleting of created Content: As a Verified User, I get notified if I want to delete a post or comment I made and get a chance to regret it.
 
 ## UX 
-The forum's design is minimalistic yet a bit colorful to let the topics and posts speak for the website. Cosmos wants the user to feel like they are in a record store with a modern twist, refering to space.
+The forum's design is minimalistic yet a bit colorful to let the topics and posts speak for the website. Cosmos wants the User to feel like they are in a record store with a modern twist, refering to space.
 
 ### Colour Scheme
 The website's primary colors are:
@@ -42,7 +42,7 @@ The website's primary colors are:
 * Logo: [Modak](https://fonts.google.com/specimen/Modak?query=moda)
 * Icons: [FontAwsome](https://fontawesome.com/)
 
-The fonts for this project are minimalistic but still familiar to the user. The font Montserrat subrayada is used for the significant headings to create a clean and minimalistic feel to the website.
+The fonts for this project are minimalistic but still familiar to the User. The font Montserrat subrayada is used for the significant headings to create a clean and minimalistic feel to the website.
 The font Quicksand creates a soft, warm, and familiar feeling for the paragraph text.
 Modak gives a vintage feel, which is in great contrast to the other fonts' more modern feeling.
 The Icon used for like, comment and social media are from FontAwsome.
@@ -53,46 +53,46 @@ The Icon used for like, comment and social media are from FontAwsome.
 ## Features
 ### Existing Features
 #### Menu/Navbar 
-The site has two different navbars at the top. The first navbar holds the links to the home page, the sign up to become a member, the login if you are already a member, and an add-post button will show if the member/user is active as a site user. The signup and login link will change to a logout link when the user is active on the site. 
+The site has two different navbars at the top. The first navbar holds the links to the home page, the sign up to become a Verified User/Admin, the login if you are already a Verified User/Admin, and an add-post button will show if the Verified User/Admin is active as a site User. The signup and login link will change to a logout link when the User is active on the site. 
 The menu is collapsable, so it becomes a hamburger menu when the screen size is 575px or lower.
 
-The second navbar holds the links to all the different categories that the post can have. So it is easier for the users to find posts and get involved in conversations about the topic of their interest. The genre link is a drop-down button that displays all the current genres available at the site.
+The second navbar holds the links to all the different categories that the post can have. So it is easier for the Users to find posts and get involved in conversations about the topic of their interest. The genre link is a drop-down button that displays all the current genres available at the site.
 
 #### SignUp/LogIn/LogOut 
-To add a post and start a conversation, the user must become a site member. 
-To signup for the site, the user must create a username and password. When that user has a registered username and password, they can log in and out from the site as they like.
+To add a post and start a conversation, the User must become a site Verified User/Admin. 
+To signup for the site, the User must create a username and password. When that User has a registered username and password, they can log in and out from the site as they like.
 
 #### View and create a post
-A visitor to the website can view all the posts made on the site. To add a post of their own, they must be a member. When creating a post, the user has to give it a title, choose a category, and write the desired content. The user can also upload a picture with the post.
-On the home page, users can see a list of the ten most-liked posts. In that way, users can find new artists, songs, or music genera they have never listened to before.
+A visitor to the website can view all the posts made on the site. To add a post of their own, they must be a Verified User/Admin. When creating a post, the User has to give it a title, choose a category, and write the desired content. The User can also upload a picture with the post.
+On the home page, Users can see a list of the ten most-liked posts. In that way, Users can find new artists, songs, or music genera they have never listened to before.
 
 #### Pagination
 The home page also shows the latest post made for the visitors. After fifteen posts, they can go forward to see more posts. The pagination also applies to the other pages for categories and most liked posts.
 
 #### View and post Comments
-A website user can see comments to a post and follow the conversation. If users want to post a comment themselves, they must be site members and logged in. To keep the tone of the discussion in the best way, they need to be approved by the admin or staff before users can see it displayed on the website.
+A website User can see comments to a post and follow the conversation. If Users want to post a comment themselves, they must be site members and logged in. To keep the tone of the discussion in the best way, they need to be approved by the admin or staff before Users can see it displayed on the website.
 
 #### View Likes and like a post
-Any visitor to the website can see how many likes a post has, but a visitor must log in as a user to like a post.
+Any visitor to the website can see how many likes a post has, but a visitor must log in as a User to like a post.
 
 #### Editing content made
-A user can choose to edit a post they made. They can edit the title the comment's content and change the image. 
+A User can choose to edit a post they made. They can edit the title the comment's content and change the image. 
 
 #### Deleting content made
-If a user has made a post, they can delete that content if they desire to do so. If they decide to delete content, they will get a message to confirm if they really want to delete it.
+If a User has made a post, they can delete that content if they desire to do so. If they decide to delete content, they will get a message to confirm if they really want to delete it.
 
 #### Footer with Social Media Icons
-The footer contains several Social Media Icons that are relevant to a music-oriented website. When a user clicks on one of the icons, the website related to the icons will open in a new tab. 
+The footer contains several Social Media Icons that are relevant to a music-oriented website. When a User clicks on one of the icons, the website related to the icons will open in a new tab. 
 
 ### Features Left to Implement
 #### A Profile page
-A profile page for users. This page could show relevant information like their post and their conversations. It could also display a list of posts with the status of draft. At the moment, a user can only post a post directly. If they change their mind and go back to another page of the site, that post will be unable to retrieve it.
+A profile page for Users. This page could show relevant information like their post and their conversations. It could also display a list of posts with the status of draft. At the moment, a User can only post a post directly. If they change their mind and go back to another page of the site, that post will be unable to retrieve it.
 
 #### Edit and Delete Categories
-Another thing to implement would be the ability for users to edit and delete the comments they posted.
+Another thing to implement would be the ability for Users to edit and delete the comments they posted.
 
 #### Multiple categories 
-A user gets to choose to add multiple categories for a post to make it more visible for others and give the user a bigger chance to start a conversation.
+A User gets to choose to add multiple categories for a post to make it more visible for others and give the User a bigger chance to start a conversation.
 
 #### Better layout design for the forms
 Create better-looking forms for the login, log out and sign up page. The input fields should align with each other to get a better UX.
@@ -107,7 +107,7 @@ These are the following technologies and packages used to develop this project:
 
 * [CSS](https://www.w3.org/TR/css/): CSS is used to style the website with colors, fonts, placement of elements, etc.
 
-* [JavaScript](https://www.javascript.com/): JavaScript are used to make the website more interactive for the user
+* [JavaScript](https://www.javascript.com/): JavaScript are used to make the website more interactive for the User
 
 * [Python](https://www.python.org/): Python is used to build the core structure and code for the project
 
