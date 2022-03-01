@@ -24,19 +24,19 @@ There are no errors form the offical [Jigsaw validator](https://jigsaw.w3.org/cs
 
 * JavaScript
 No errors where found when going through the offical [Jshint validator](https://jshint.com/).
- * There is 1 functions in this file.
- * Function with the largest signature take 1 arguments, while the median is 0.
- * Largest function has 18 statements in it, while the median is 3.
- * The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+ * There are 2 functions in this file.
+ * Function with the largest signature take 1 arguments, while the median is 1.
+ * Largest function has 1 statements in it, while the median is 1.
+ * The most complex function has a cyclomatic complexity value of 1 while the median is 1.
 
-    ![script.js](documentation/testing/.png)
+    ![script.js](documentation/testing/jshint.png)
 
 * Python
 The code passed through [PEP8 linter](http://pep8online.com/checkresult). The result confirmed there are no problems with the code.
 
-![PEP8-1](documentation/testing/.png)
-![PEP8-2](documentation/testing/.png)
-![PEP8-3](documentation/testing/.png)
+![PEP8-Form](documentation/testing/pep8forms.png)
+![PEP8-Models](documentation/testing/pep8models.png)
+![PEP8-Views](documentation/testing/pep8views.png)
 
 ### Browser Compatibility
 * Google Chrome
@@ -57,10 +57,10 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 * Safari
   * The website runs without any issues in the Safari browser
 
-  ![Safari](documentation/testing/.png)
+  ![Safari](documentation/testing/safari.png)
 
 ### Responsiveness
-Form tablet view 
+#### Form tablet view 
 * The 'Home' view
 ![TabletHome](documentation/testing/tablet-11.png)
 
@@ -103,7 +103,7 @@ Form tablet view
 * The Delete Post View
 ![TabletDeletePost](documentation/testing/tablet-15.png)
 
-For mobile view
+#### Form mobile view
 * The 'Home' view
 ![MobileHome](documentation/testing/mobile-7.png)
 
@@ -317,7 +317,6 @@ When a Verified User chooses to log out from the website, a message displays on 
 
 ![StayPut](documentation/testing/stayput.png)
 
-
 * Pagination
 The home page and categories pages do not have working pagination. See Unfixed Bugs down belove to get the information regarding that matter.
 The pagination for 'Most Liked Post' shows no errors. After fifteen posts, a 'Next' button appears and, when selected, takes the User to the next page. If there are more pages than two, both the 'Next' and 'Back' buttons will appear on the page. If the User is on the last page, only the 'Back' button will show and take the User back to the previous page.
@@ -350,6 +349,8 @@ If a User clicks on the Logo below the Social Media Icons, they get redirected t
 
 ### Unfixed Bugs
 * Pagination
-When trying to implement pagination to the function-based views, such as the home view and category view, the website would only show one post for that view. When writing the code for the pagination for that view, I tried to put the variables for pagination on different levels in the code but only managed to make it work by showing one post. For the templates, I tried other inputs for the ifs- and for-statements with the result as above. I'm sure that I can make it work as I practice. 
+When trying to implement pagination to the function-based views, such as the home view and category view, the website would only show one post for that view. When writing the code for the pagination for that view, I tried to put the variables for pagination on different levels in the code but only managed to make it work by showing one post. For the templates, I tried other inputs for the ifs- and for-statements with the result as above. I'm sure that I can make it work as I practice. The images below shows some of the way I tried to build the code.
 
-![](documentation/testing/.png)
+![PaginationBuild1](documentation/testing/paginationbug1.png)
+
+![PaginationBuild2](documentation/testing/paginationb2.png)
