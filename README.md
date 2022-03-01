@@ -68,33 +68,102 @@ The Icon used for like, comment and social media are from FontAwsome.
 The site has two different navbars at the top. The first navbar holds the links to the home page, the sign up to become a Verified User/Admin, the login if you are already a Verified User/Admin, and an add-post button will show if the Verified User/Admin is active as a site User. The signup and login link will change to a logout link when the User is active on the site. 
 The menu is collapsable, so it becomes a hamburger menu when the screen size is 575px or lower.
 
+Normal
+![NormalVerified](documentation/testingmenu-user-chrome/.png)
+
+![NormalNonVer](documentation/testing/loggedout.png)
+
+Collapsed
+![CollVerified](documentation/testing/dim439-menu-inlogg.png)
+
+![CollNonVer](documentation/testing/dim439-menu-nolog.png)
+
 The second navbar holds the links to all the different categories that the post can have. So it is easier for the Users to find posts and get involved in conversations about the topic of their interest. The genre link is a drop-down button that displays all the current genres available at the site.
+
+* Category Menu Normal
+![CategoryMenu](documentation/testing/category-menu2.png)
+
+* Category Menu Collapse
+![CollapseCategoryM](documentation/testing/mobile-14.png)
+
+![CollapseCategoryM2](documentation/testing/mobile-15.png)
 
 #### SignUp/LogIn/LogOut 
 To add a post and start a conversation, the User must become a site Verified User/Admin. 
 To signup for the site, the User must create a username and password. When that User has a registered username and password, they can log in and out from the site as they like.
 
+* Sign Up
+![TheSignUpForm](documentation/testing/signup-form.png)
+
+* Log In
+
+
+* Log Out
+![LogOut](documentation/testing/tablet-10.png)
+
 #### View and create a post
 A visitor to the website can view all the posts made on the site. To add a post of their own, they must be a Verified User/Admin. When creating a post, the User has to give it a title, choose a category, and write the desired content. The User can also upload a picture with the post.
 On the home page, Users can see a list of the ten most-liked posts. In that way, Users can find new artists, songs, or music genera they have never listened to before.
 
+* Unverified User:
+  Read post with and without comments
+  ![ReadPost3](documentation/testing/not-user-post.png)
+
+  ![ReadPost4](documentation/testing/un-comments.png)
+
+* Verified User/Admin:
+  Read post with and without comments
+  ![ReadPost1](documentation/testing/post-detail-chrome.png)
+
+  ![ReadPost2](documentation/testing/postview-comment-chrome.png)
+
 #### Pagination
 The home page also shows the latest post made for the visitors. After fifteen posts, they can go forward to see more posts. The pagination also applies to the other pages for categories and most liked posts.
+
+![Pagination1](documentation/testing/pagination1.png)
+
+![Pagination2](documentation/testing/pagination2.png)
+
+![Pagination3](documentation/testing/pagination3.png)
 
 #### View and post Comments
 A website User can see comments to a post and follow the conversation. If Users want to post a comment themselves, they must be site members and logged in. To keep the tone of the discussion in the best way, they need to be approved by the admin or staff before Users can see it displayed on the website.
 
+* Add Comment as a Verified User/Admin
+![AddComment](documentation/testing/add-comment.png)
+
+* View Comments
+![ViewComment](documentation/testing/viewcommentnon.png)
+
+* View Comments as a Verified User/Admin
+![CommentViewAsVerified](documentation/testing/comment-section.png)
+
 #### View Likes and like a post
 Any visitor to the website can see how many likes a post has, but a visitor must log in as a User to like a post.
+
+* View likes
+![ViewLikes](documentation/testing/most-popular.png)
+
+* Likes a post
+![Like](documentation/testing/like.png)
+
+* Unlikes the post
+![Unlike](documentation/testing/unlike.png)
 
 #### Editing content made
 A User can choose to edit a post they made. They can edit the title the comment's content and change the image. 
 
+![EditPost](documentation/testing/edit-postform.png)
+
 #### Deleting content made
 If a User has made a post, they can delete that content if they desire to do so. If they decide to delete content, they will get a message to confirm if they really want to delete it.
 
+![DeletePost](documentation/testing/tablet-13.png)
+
 #### Footer with Social Media Icons
 The footer contains several Social Media Icons that are relevant to a music-oriented website. When a User clicks on one of the icons, the website related to the icons will open in a new tab. 
+
+![Footer](documentation/testing/footer.png)
 
 ### Features Left to Implement
 #### A Profile page

@@ -273,14 +273,24 @@ The menu collapses when the screen size is 575px or lower and gets a 'Categories
 If the User is verified on the website and clicks on either the login link or signup link, they will get redirected to the 'Home' page. If they select the add post link, the User gets redirected to the 'Add Post' page.
 When Unverified Users select either the login link or signup link, they will get redirected to those pages. If they choose to click on the add post link, they will get redirected to the Log In page.
 
+* Category Menu Normal
 ![CategoryMenu](documentation/testing/category-menu2.png)
 
+* Category Menu Collapse
+![CollapseCategoryM](documentation/testing/mobile-14.png)
+
+![CollapseCategoryM2](documentation/testing/mobile-15.png)
+
+* A Category page
 ![CategoryPage](documentation/testing/categoryp.png)
 
+* Redirect to Log In page
 ![LogInPage](documentation/testing/tablet-3.png)
 
+* Redirect to Sign Up page
 ![SignUpPage](documentation/testing/tablet-4.png)
 
+* Redirect to Add Post page
 ![AddPostPage](documentation/testing/tablet-6.png)
 
 * SignUp/LogIn/LogOut
@@ -301,6 +311,9 @@ Note: that 'Fyll i det här fältet' means 'This field is required' in Swedish.
 
   * LogIn: 
 The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
+
+![]()
+
 ![NoUserName](documentation/testing/nousername.png)
 
 ![NoPassword](documentation/testing/nopassword.png)
