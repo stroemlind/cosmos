@@ -2,7 +2,6 @@
 "They say there are no sounds in space. So let's share and create some noise together with Cosmos."
 Cosmos is your number one source to go to if you want to discuss and connect with others through music.
 
-amiresponisive image
 
 ## User Stories
 * Create Posts: As a Verified User/Admin, I can create, read, edit and delete posts about music I like and start conversations with other Users.
@@ -34,7 +33,10 @@ The forum's design is minimalistic yet a bit colorful to let the topics and post
 The website's primary colors are:
 * Black  
 * different kinds of dark blue
-* a bluish-white(rgb(252, 251, 255)) 
+* A white version(rgb(252, 251, 255))
+* Normal white (#ffffff)
+
+![Colors](documentation/images/color.png)
 
 ### Typography
 * Headings/Menu/Footer/Comments: [Montserrat subrayada](https://fonts.google.com/specimen/Montserrat+Subrayada?query=monts)
@@ -191,7 +193,9 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ## Credits
 ### Content
 For an overall start of the project:
-* [CodeMy](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+* All videos in this [CodeMy](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) plylist, except videos 16, 17, 19 - 21 and 23 - 35
+* [Medium](https://medium.com/swlh/build-your-own-blog-with-django-part-1-e5715b7cd9bc)
+* [Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
 
 For integrating and installing TinyMCE text editor:
 * [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-integrate-custom-rich-text-editor-in-your-django-website/)
@@ -232,10 +236,21 @@ Category navbar:
 Max length of words shown in blog post on index page:
 * [Django Projects](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#truncatechars-html)
 
+Django testing:
+* [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+* [Real Python](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/)
+* [Stack overflow](https://stackoverflow.com/questions/52574804/django-unit-test-for-models)
+* Code Institute Lesson 'Hello Django - [Testning](https://docs.google.com/document/d/1L7zyIXL1wCki2eOoDZPCw9fIIe93NfdCiA_mbht9P8A/edit)'
+
+Bootstrap functionalities:
+* [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+
 ### Media
 * Post Images used during development are created from these pexels images: 
  * [Image one](https://www.pexels.com/sv-se/foto/himmel-natt-rymden-galaxy-956981/)
 
  * [Image two](https://www.pexels.com/sv-se/foto/himmel-natt-rymden-mork-1252890/)
+
+ * [ColorGenerator](https://coolors.co/fcfbff-03010e-0a042a-1e164b-ffffff)
 
 ### Acknowledgements
