@@ -54,7 +54,7 @@ The Icon used for like, comment and social media are from FontAwsome.
 ### Existing Features
 #### Menu/Navbar 
 The site has two different navbars at the top. The first navbar holds the links to the home page, the sign up to become a member, the login if you are already a member, and an add-post button will show if the member/user is active as a site user. The signup and login link will change to a logout link when the user is active on the site. 
-The menu is collapsable, so it becomes a hamburger menu when the screen size is 990px or lower.
+The menu is collapsable, so it becomes a hamburger menu when the screen size is 575px or lower.
 
 The second navbar holds the links to all the different categories that the post can have. So it is easier for the users to find posts and get involved in conversations about the topic of their interest. The genre link is a drop-down button that displays all the current genres available at the site.
 

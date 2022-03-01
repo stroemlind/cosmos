@@ -156,7 +156,7 @@ This section shows the tests for the features of the website that are not relate
 
 * Menu/Navbar 
 The first navbar shows the links to the home page through the Logo and 'Home' option, the sign up to become a Verified User and the link to login as Verified User/Admin. If a User verifies through login or signup, the navbar changes its links to 'Add Post' to add content and a 'Log out' link to log out from the website. 
-The menu collapses when the screen size is 990px or lower and gets a hamburger icon that the User can click on to open the navbar.
+The menu collapses when the screen size is 575px or lower and gets a hamburger icon that the User can click on to open the navbar.
 
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
@@ -164,6 +164,7 @@ The menu collapses when the screen size is 990px or lower and gets a hamburger i
 ![](documentation/testing/.png)
 
 The second navbar for categories displays all the categories available on the website. When selected for the music genres categories, a drop-down function shows all the genres available. When Users select a category, they are redirected to a page whit all the posts. If there is no post available for that category, a message is displayed to the User to either login, create on themself or become a Verified User to make a post.
+The menu collapses when the screen size is 575px or lower and gets a 'Categories'-button that the User can click on to open the navbar.
 
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
