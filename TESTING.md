@@ -10,12 +10,16 @@ Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Saf
 
 ### Code Validation
 * HTML
-There are no errors form the offical [W3C Validatior]()
-    ![Game-validation](documentation/testing/.png)
+There are no errors form the offical [W3C Validatior](https://validator.w3.org/)
+    ![HTML-validation](documentation/testing/html-valid.png)
+    Link to the validation: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F)
 
 * CSS
-There are no errors form the offical [Jigsaw validator]()
-    ![Css-validation](documentation/testing/.png)
+There are no errors form the offical [Jigsaw validator](https://jigsaw.w3.org/css-validator/), but warnings that I am aware of.
+  ![Css-validation](documentation/testing/cssvalid.png)
+
+  ![Css-validation-warning](documentation/testing/csswarning.png)
+    Link to the validation: [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JavaScript
 No errors where found when going through the offical [Jshint validator](https://jshint.com/).
