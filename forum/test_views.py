@@ -48,40 +48,6 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'category.html', 'base.html')
 
-    def test_get_add_post_page(self):
-        """ Test to get the right template for the view """
-        response = self.client.get('/add_post/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'add_post.html', 'base.html')
-
-    def test_get_add_comment_page(self):
-        """ Test to get the right template for the view """
-        post = Post.objects.get(id=1)
-        response = self.client.get(f'/post/{post.id}/add_comment/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'add_comment.html', 'base.html')
-
-    def test_get_editpost_page(self):
-        """ Test to get the right template for the view """
-        post = Post.objets.get(id=1)
-        response = self.client.get(f'/post/edit/{post.id}')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'edit_post.html', 'base.html')
-
-    def test_get_deletepost_page(self):
-        """ Test to get the right template for the view """
-        post = Post.objects.get(id=1)
-        response = self.client.get(f'/post/{post.id}/delete')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'delete_post.html', 'base.html')
-
-    def test_get_like_view(self):
-        """ Test to get the right template for the view """
-        post = Post.objects.get(id=1)
-        response = self.client.get(reverse(f'/like/{post.id}'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'post_detail.html', 'base.html')
-
     def test_get_mostlikedpost_page(self):
         """ Test to get the right template for the view """
         response = self.client.get('/popular_post/')

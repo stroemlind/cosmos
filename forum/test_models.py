@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
-from django.urls import reverse
 from .models import Post, Comment, Category
 
 
@@ -27,13 +26,7 @@ class TestPostModel(TestCase):
             content='test text body',
             created_on='2022.02.27',
             status=1,
-            # likes=likes.set(True)
             )
-
-    def test_status_default_published(self):
-        """ Test if status is 1 when post are made """
-        post = Post.objects.get(id=1)
-        self.assertEqual(post, 1)
 
     def test_title_max_length(self):
         """ test """
@@ -46,12 +39,6 @@ class TestPostModel(TestCase):
         post= Post.objects.get(id=1)
         max_length = post._meta.get_field('slug').max_length
         self.assertEqual(max_length, 200)
-
-    def test_author_name(self):
-        """ test """
-        post = Post.objects.get(id=1)
-        field_label = post._meta.get_field('author')
-        self.assertEqual(field_label, 'author')
 
     def test_get_absolute_url(self):
         """ test """
