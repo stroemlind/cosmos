@@ -98,21 +98,62 @@ Form tablet view
 * The Most Popular Post view
 ![TabletPopular](documentation/testing/tablet-9.png)
 
-* 
-![](documentation/testing/.png)
+* The Edit Post View
+![TabletEditPost](documentation/testing/tablet-14.png)
+
+* The Delete Post View
+![TabletDeletePost](documentation/testing/tablet-15.png)
 
 For mobile view
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+* The 'Home' view
+![MobileHome](documentation/testing/mobile-7.png)
+
+* Menu/Navbar view
+![MobileNav1](documentation/testing/dim439-menu-nolog.png)
+
+![MobileNav2](documentation/testing/dim439-menu-inlogg.png)
+
+![MobileNav3](documentation/testing/mobile-14.png)
+
+![MobileNav4](documentation/testing/mobile-15.png)
+
+* The Log In view
+![MobileLogIn](documentation/testing/mobile-4.png)
+
+* The Log Out view
+![MobileLogOut](documentation/testing/mobile-13.png)
+
+* The Sign Up view
+![MobileSignUp](documentation/testing/mobile-5.png)
+
+* The Add Post view 
+![MobileAddPost](documentation/testing/mobile-9.png)
+
+* Post Detail View
+![MobileUnverifiedUser](documentation/testing/mobile-1.png)
+
+![MobileVerifiedUser](documentation/testing/mobile-10.png)
+
+* Edit Post view
+![MobileEditPost](documentation/testing/mobile-11.png)
+
+* Delete Post view
+![MobileDeletePost](documentation/testing/mobile-12.png)
+
+* Add Comment view
+![MobileAddComment](documentation/testing/mobile-16.png)
+
+* Comments view
+![MobileComments](documentation/testing/mobile-8.png)
+
+* Most Popular Post view
+![MobilePopular](documentation/testing/mobile-2.png)
+
+* Footer and Pagination
+![MobileFooter](documentation/testing/mobile-3.png)
+
+* No Post yet view 
+![NoPost](documentation/testing/mobile-6.png)
 
 ### Tested Code
 The result for the testing with Django testing of the view functions.
@@ -131,7 +172,7 @@ An Unverified User/Visitor can only read posts.
   * Verified User/Admin:
   Read post with and without comments
   ![ReadPost1](documentation/testing/post-detail-chrome.png)
-  
+
   ![ReadPost2](documentation/testing/postview-comment-chrome.png)
 
   Create post form
@@ -161,10 +202,7 @@ An Unverified User/Visitor can only read posts.
 * Choose Category & Categories: 
 A verified User/Admin can navigate through the category options available from the categories menu to find the relevant post about that topic.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![CategoryMenu](documentation/testing/category-menu2.png)
 
 * Post Comments: 
 A Verified User/Admin can leave comments on posts to start or participate in conversations.
@@ -179,15 +217,16 @@ Any Visitor to the website can view comments on different posts and read the con
 ![ViewComment](documentation/testing/viewcommentnon.png)
 
 * Like/Vote/Unlike: 
-A Verified User/Admin can Like/Vote and Unlike a post to show their interest in the subject.
+A Verified User/Admin can Like/Vote and Unlike the like on a post to show their interest in the subject.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![Like](documentation/testing/like.png)
+
+![Unlike](documentation/testing/unlike.png)
 
 * View Likes: 
 Any Visitor or Verified User/Admin can view the number of Likes/Votes a post has.
 
-![](documentation/testing/.png)
+![ViewLikes](documentation/testing/most-popular.png)
 
 * View popular posts: 
 A Visitor or Verified User/Admin can view on a designated page the post with the most Likes/Votes to see which are popular on the forum at the moment.
