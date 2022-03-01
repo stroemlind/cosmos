@@ -118,7 +118,9 @@ def add_comment(request, pk):
 
 
 class EditPost(generic.UpdateView):
-    """ test """
+    """
+    View for edit user post
+    """
     model = Post
     template_name = 'edit_post.html'
     fields = [
