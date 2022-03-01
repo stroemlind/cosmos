@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-md-8 offset-md-4">
                             {% if user.is_authenticated %}
-                                {% if user.id == post.author.id or user.is_superuser %}
+                                {% if user.id == post.author.id  %}
                                 <p id="crud-btn" class="mx-auto">
                                     <a href="{% url 'edit-post' post.pk %}" role="button" aria-label="Link to Edit Post (Open in the same tab)">Edit</a>
                                     <a href="{% url 'delete-post' post.pk %}" role="button" aria-label="Link to Delete Post (Open in the same tab)">Delete</a>
