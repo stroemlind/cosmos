@@ -232,21 +232,28 @@ When Unverified Users select either the login link or signup link, they will get
 
 * SignUp/LogIn/LogOut
   * SignUp: 
-When Unverified User signup, the fields for Username and Password are required to fill in; if requirements do not meet the necessary input, a message displays above the input field, notifying the error. The User is also required to write the password twice when signing up. When the form requirements are correct, the User gets redirected to the 'Home' page.
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+When Unverified User signup, the fields for Username and Password are required to fill in; if requirements do not meet the necessary input, a message displays above the input field, notifying the error. The User is also required to write the password twice when signing up. When the form requirements are correct, the User gets redirected to the 'Home' page. 
+
+Note: that 'Fyll i det här fältet' means 'This field is required' in Swedish.
+
+![TheSignUpForm](documentation/testing/signup-form.png)
+![SignUp1](documentation/testing/signup-1.png)
+![SignUp2](documentation/testing/signup-2.png)
+![SignUp3](documentation/testing/signup-3.png)
+![SignUp4](documentation/testing/signup-4.png)
 
   * LogIn: 
 The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![NoUserName](documentation/testing/nousername.png)
+![NoPassword](documentation/testing/nopassword.png)
+![Incorrect](documentation/testing/incorrectlog.png)
+![RedirectedHome](documentation/testing/stayput.png)
 
   * LogOut: 
 When a Verified User chooses to log out from the website, a message displays on the screen, asking if they are sure they want to log out or stay logged in on the website. When the User logs out, they get redirected to the 'Home' page. If a User chooses to stay logged in, they get redirected to the 'Home' page.
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![LogOut](documentation/testing/tablet-10.png)
+![LogOutHome](documentation/testing/loggedout.png)
+![StayPut](documentation/testing/stayput.png)
 
 
 * Pagination
