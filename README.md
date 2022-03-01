@@ -50,6 +50,16 @@ Modak gives a vintage feel, which is in great contrast to the other fonts' more 
 The Icon used for like, comment and social media are from FontAwsome.
 
 ### Wireframes
+* Desktop 
+![WireframHome](documentation/wireframes/wireframe2.png)
+![WireframePost](documentation/wireframes/wireframe7.png)
+![WireframeLogIn](documentation/wireframes/wireframe1.png)
+![WireframeCreate](documentation/wireframes/wireframe6.png)
+
+* Mobile
+![WireframeMobileHome](documentation/wireframes/wireframe5.png)
+![WireframeMobileLogSign](documentation/wireframes/wireframe4.png)
+![WireframMobileCreate](documentation/wireframes/wireframe3.png)
 
 
 ## Features
