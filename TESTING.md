@@ -189,24 +189,24 @@ Any Visitor or Verified User/Admin can view the number of Likes/Votes a post has
 * View popular posts: 
 A Visitor or Verified User/Admin can view on a designated page the post with the most Likes/Votes to see which are popular on the forum at the moment.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![MostPopularPage1](documentation/testing/most-popular-chrome.png)
+![MostPopularPage2](documentation/testing/most-popular2.png)
 
 * Account Registration: 
 A Visitor/Unverified User can sign up to become a community member/Verified User and access all the website's functionalities.
 
-![](documentation/testing/.png)
+![SignUpForm](documentation/testing/signup-form.png)
 
 * Approve Comments: 
 A Verified Admin to the website is the only one with access to approve comments before posting on the website, to filter out objectionable comments.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![ApproveComments1](documentation/testing/approve-comments.png)
+![ApprovedComments](documentation/testing/approved-comments.png)
 
 * Deleting of created Content: 
 When a Verified User wants to delete made content, they get a notification with an option to change their mind or confirm they want to delete that content.
 
-![](documentation/testing/.png)
+![DeletePost](documentation/testing/tablet-13.png)
 
 ### Tested Features
 This section shows the tests for the features of the website that are not related to the user stories. Please go to the Tested User Stories section above to see those tests.
@@ -261,7 +261,7 @@ The pagination for 'Most Liked Post' shows no errors. After fifteen posts, a 'Ne
 The Social Media Icons in the footer takes the User to that icon's Social Media home page and opens up in a new tab. 
 If a User clicks on the Logo below the Social Media Icons, they get redirected to the Cosmos home page.
 
-![](documentation/testing/.png)
+![Footer](documentation/testing/footer.png)
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
