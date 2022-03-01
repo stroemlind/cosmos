@@ -170,8 +170,10 @@ Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment.
 * Select GitHub and confirm the connection between Heroku and GitHub.
 * Search for the project's repository name on GitHub and click "connect" to link GitHub with Heroku.
 * On the same page, scroll down and choose how to deploy the app. For this project, automatic deploys are selected and enabled.
-* Create a **Procfile** for Heroku, using the following command:
-    - `echo web: node index.js > Procfile`
+* Create a **Procfile** for Heroku, inside the file insert the following line:
+    - `web: gunicorn cosmos.wsgi`
+    * Note that cosmos is the name for this app.
+    
 * Create a **requirements.txt** file for Heroku, using the following command:
     - `pip3 freeze --local > requirements.txt`
 
