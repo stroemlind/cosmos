@@ -4,6 +4,10 @@
 ### Responsiveness
 
 ### Tested Code
+The view functions that got tested with Django testing and the result.
+
+![](documentation/testing/.png)
+![](documentation/testing/.png)
 
 ### Tested User Stories
 This section provides the test done to check the User Stories for this project.
@@ -121,3 +125,5 @@ If a User clicks on the Logo below the Social Media Icons, they get redirected t
 ### Unfixed Bugs
 * Pagination
 When trying to implement pagination to the function-based views, such as the home view and category view, the website would only show one post for that view. When writing the code for the pagination for that view, I tried to put the variables for pagination on different levels in the code but only managed to make it work by showing one post. For the templates, I tried other inputs for the ifs- and for-statements with the result as above. I'm sure that I can make it work as I practice. 
+
+![](documentation/testing/.png)
