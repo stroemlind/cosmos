@@ -19,7 +19,7 @@
                     </a>
                     {% else %}
                     <a href="{% url 'post-detail' post.pk %}" aria-label="A link to the post through the post image (Open in the same tab)">
-                        <img src="{{ post.image.url }}" alt="" width="100%" class="card-img rounded-start">
+                        <img src="{{ post.image.url }}" alt="Users own choice of image" class="card-img rounded-start">
                     </a>
                     {% endif %} 
                 </div>

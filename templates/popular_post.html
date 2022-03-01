@@ -14,7 +14,7 @@
                     </a>
                     {% else %}
                     <a href="{% url 'post-detail' post.pk %}" aria-label="Link to the post through imageb(Open in the same tab)">
-                        <img src="{{ post.image.url }}" alt="" width="100%">
+                        <img src="{{ post.image.url }}" alt="Users own choice of image">
                     </a>
                     {% endif %} 
                 </div>
