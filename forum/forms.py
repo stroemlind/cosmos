@@ -36,9 +36,9 @@ class PostForm(forms.ModelForm):
                 }),
             'author': forms.TextInput(attrs={
                 'class': 'form-control',
-                'value': '',
+                'value': '',  # Empty for the js script rendering in the add and edit file
                 'id': 'author-id',
-                'type': 'hidden'
+                # 'type': 'hidden'
                 }),
             'image': forms.FileInput(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={
