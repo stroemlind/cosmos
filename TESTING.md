@@ -26,6 +26,13 @@ No errors where found when going through the offical [Jshint validator](https://
 
     ![script.js](documentation/testing/.png)
 
+* Python
+The code passed through [PEP8 linter](http://pep8online.com/checkresult). The result confirmed there are no problems with the code.
+
+![PEP8](documentation/testing/.png)
+![PEP8](documentation/testing/.png)
+![PEP8](documentation/testing/.png)
+
 ### Browser Compatibility
 * Google Chrome
   * The website runs without any issues in the Google Chrome browser
@@ -165,6 +172,8 @@ The menu collapses when the screen size is 575px or lower and gets a hamburger i
 
 The second navbar for categories displays all the categories available on the website. When selected for the music genres categories, a drop-down function shows all the genres available. When Users select a category, they are redirected to a page whit all the posts. If there is no post available for that category, a message is displayed to the User to either login, create on themself or become a Verified User to make a post.
 The menu collapses when the screen size is 575px or lower and gets a 'Categories'-button that the User can click on to open the navbar.
+If the User is verified on the website and clicks on either the login link or signup link, they will get redirected to the 'Home' page. If they select the add post link, the User gets redirected to the 'Add Post' page.
+When Unverified Users select either the login link or signup link, they will get redirected to those pages. If they choose to click on the add post link, a message will display, letting the User know that they need to Verify themself as a registered User to add a post to that category.
 
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
@@ -174,12 +183,20 @@ The menu collapses when the screen size is 575px or lower and gets a 'Categories
 * SignUp/LogIn/LogOut
   * SignUp: 
 When Unverified User signup, the fields for Username and Password are required to fill in; if requirements do not meet the necessary input, a message displays above the input field, notifying the error. The User is also required to write the password twice when signing up. When the form requirements are correct, the User gets redirected to the 'Home' page.
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
 
   * LogIn: 
 The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
+![](documentation/testing/.png)
+![](documentation/testing/.png)
 
   * LogOut: 
 When a Verified User chooses to log out from the website, a message displays on the screen, asking if they are sure they want to log out or stay logged in on the website. When the User logs out, they get redirected to the 'Home' page. If a User chooses to stay logged in, they get redirected to the 'Home' page.
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
 
 
 * Pagination
