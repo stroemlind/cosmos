@@ -12,6 +12,7 @@ Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Saf
 * HTML
 There are no errors form the offical [W3C Validatior](https://validator.w3.org/)
     ![HTML-validation](documentation/testing/html-valid.png)
+    
     Link to the validation: [W3C Validatior](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F)
 
 * CSS
@@ -19,7 +20,8 @@ There are no errors form the offical [Jigsaw validator](https://jigsaw.w3.org/cs
   ![Css-validation](documentation/testing/cssvalid.png)
 
   ![Css-validation-warning](documentation/testing/csswarning.png)
-    Link to the validation: [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    
+  Link to the validation: [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcosmos-forum.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JavaScript
 No errors where found when going through the offical [Jshint validator](https://jshint.com/).
@@ -114,10 +116,10 @@ For mobile view
 
 ### Tested Code
 The result for the testing with Django testing of the view functions.
-![](documentation/testing/test-views.png)
+![TestViews](documentation/testing/test-views.png)
 
 The result for the testing with Django testing of the models.
-![](documentation/testing/test-model.png)
+![TestModel](documentation/testing/test-model.png)
 
 ### Tested User Stories
 This section provides the test done to check the User Stories for this project.
@@ -127,16 +129,32 @@ A Verified User/Admin can read, create, edit and delete a post to start a conver
 An Unverified User/Visitor can only read posts. 
 
   * Verified User/Admin:
-  ![](documentation/testing/.png)
-  ![](documentation/testing/.png)
-  ![](documentation/testing/.png)
-  ![](documentation/testing/.png)
+  Read post with and without comments
+  ![ReadPost1](documentation/testing/post-detail-chrome.png)
+  ![ReadPost2](documentation/testing/postview-comment-chrome.png)
+
+  Create post form
+  ![CreatePost](documentation/testing/post-form.png)
+
+  Edit post form
+  ![EditPost](documentation/testing/edit-postform.png)
+
+  Delete post form
+  ![DeletePost](documentation/testing/tablet-13.png)
 
   * Unverified User:
-  ![](documentation/testing/.png)
-  ![](documentation/testing/.png)
-  ![](documentation/testing/.png)
-  ![](documentation/testing/.png)
+  Read post with and without comments
+  ![ReadPost3](documentation/testing/not-user-post.png)
+  ![ReadPost4](documentation/testing/un-comments.png)
+
+  Add post
+  ![AddPost2](documentation/testing/.png)
+
+  Edit post
+  ![EditPost2](documentation/testing/no-edit.png)
+
+  Delete post
+  ![DeletePost3](documentation/testing/no-delete.png)
 
 * Choose Category & Categories: 
 A verified User/Admin can navigate through the category options available from the categories menu to find the relevant post about that topic.
