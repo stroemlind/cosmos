@@ -171,6 +171,17 @@ The menu collapses when the screen size is 575px or lower and gets a 'Categories
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
 
+* SignUp/LogIn/LogOut
+  * SignUp: 
+When Unverified User signup, the fields for Username and Password are required to fill in; if requirements do not meet the necessary input, a message displays above the input field, notifying the error. The User is also required to write the password twice when signing up. When the form requirements are correct, the User gets redirected to the 'Home' page.
+
+  * LogIn: 
+The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
+
+  * LogOut: 
+When a Verified User chooses to log out from the website, a message displays on the screen, asking if they are sure they want to log out or stay logged in on the website. When the User logs out, they get redirected to the 'Home' page. If a User chooses to stay logged in, they get redirected to the 'Home' page.
+
+
 * Pagination
 The home page and categories pages do not have working pagination. See Unfixed Bugs down belove to get the information regarding that matter.
 The pagination for 'Most Liked Post' shows no errors. After fifteen posts, a 'Next' button appears and, when selected, takes the User to the next page. If there are more pages than two, both the 'Next' and 'Back' buttons will appear on the page. If the User is on the last page, only the 'Back' button will show and take the User back to the previous page.
