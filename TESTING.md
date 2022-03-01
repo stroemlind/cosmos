@@ -253,11 +253,9 @@ When a Verified User chooses to log out from the website, a message displays on 
 The home page and categories pages do not have working pagination. See Unfixed Bugs down belove to get the information regarding that matter.
 The pagination for 'Most Liked Post' shows no errors. After fifteen posts, a 'Next' button appears and, when selected, takes the User to the next page. If there are more pages than two, both the 'Next' and 'Back' buttons will appear on the page. If the User is on the last page, only the 'Back' button will show and take the User back to the previous page.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![Pagination1](documentation/testing/pagination1.png)
+![Pagination2](documentation/testing/pagination2.png)
+![Pagination3](documentation/testing/pagination3.png)
 
 * Footer with Social Media Icons
 The Social Media Icons in the footer takes the User to that icon's Social Media home page and opens up in a new tab. 
