@@ -15,6 +15,10 @@ img {
     border-radius: 5px;
 }
 
+h2, h3 {
+    font-size: 20px;
+}
+
 .logo {
     font-family: 'Modak', cursive;
     font-size: 60px;

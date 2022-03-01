@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container-fluid pt-3 main-body">
     <div class="row g-0">
-        <h2 class="border-bottom border-dark">Most Popular Posts:</h2>
+        <h1 class="border-bottom border-dark">Most Popular Posts:</h1>
         {% for post in post_list %}
         <div class="card col-md-10 col-sm-12 mb-3 mt-3 offset-md-1 border-dark">
             <div class="row g-0">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="row g-0">
                             <div class="col">
-                                <h5 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="post-title">{{ post.title }}</a></h5>
+                                <h2 class="card-title"><a href="{% url 'post-detail' post.pk %}" class="post-title">{{ post.title }}</a></h2>
                             </div>
                         </div>
                         <div class="row g-0">

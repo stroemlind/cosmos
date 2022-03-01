@@ -22,7 +22,7 @@
                     {% if "placeholder" in post.image.url %}
                         <img src="https://res.cloudinary.com/elistr/image/upload/v1645004389/24_nboztu.png" class="img-fluid rounded-start" alt="Images of text logo with a background of space">
                     {% else %}
-                        <img src="{{ post.image.url }}" alt="" width="100%">
+                        <img src="{{ post.image.url }}" alt="Users choice of image">
                     {% endif %}
                     <div class="row">
                         <div class="col-md-8 offset-md-4">
@@ -51,7 +51,7 @@
         <div class="col-md-9 gx-3 detail-body">
             <div class="row">
                 <div class="col mt-2" id="title-post">
-                    <h2>{{ post.title }}</h2>
+                    <h1>{{ post.title }}</h1>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@
                     <div class="col-md-12 card border-0 detail-body">
                         <div class="row">
                             <div class="col-md-7 col-sm-8">
-                                <h3 class="padd-round ">Conversation:</h3>
+                                <h2 class="padd-round ">Conversation:</h2>
                             </div>
                             <div class="col-md-5 col-sm-4 mt-1">
                                 {% if user.is_authenticated %}
