@@ -8,7 +8,7 @@
     <div class="row g-0">
         <!--<h2 class="border-bottom border-dark">{{ category_post }}</h2>-->
         {% for post in category_post %}
-        <div class="card col-md-10 col-sm-10 mb-3 mt-3 offset-md-1 offset-sm-1 border-dark" id="post-body">
+        <div class="card col-md-10 col-sm-10 mb-3 mt-3 offset-md-1 offset-sm-1 border-dark">
             <div class="row g-0">
                 <div class="col-md-4 col-sm-5">
                     {% if "placeholder" in post.image.url %}
@@ -17,7 +17,7 @@
                     </a>
                     {% else %}
                     <a href="{% url 'post-detail' post.pk %}" aria-label="Link to the post through image (Open in the same tab)">
-                        <img src="{{ post.image.url }}" alt="Users own choice of image" width="100%" class="card-img rounded-start">
+                        <img src="{{ post.image.url }}" alt="Users choice of image" width="100%" class="card-img rounded-start">
                     </a>
                     {% endif %} 
                 </div>
