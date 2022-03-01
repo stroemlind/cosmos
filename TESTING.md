@@ -131,6 +131,7 @@ An Unverified User/Visitor can only read posts.
   * Verified User/Admin:
   Read post with and without comments
   ![ReadPost1](documentation/testing/post-detail-chrome.png)
+  
   ![ReadPost2](documentation/testing/postview-comment-chrome.png)
 
   Create post form
@@ -145,6 +146,7 @@ An Unverified User/Visitor can only read posts.
   * Unverified User:
   Read post with and without comments
   ![ReadPost3](documentation/testing/not-user-post.png)
+
   ![ReadPost4](documentation/testing/un-comments.png)
 
   Add post: The User gets redirected to the Log In page
@@ -168,6 +170,7 @@ A verified User/Admin can navigate through the category options available from t
 A Verified User/Admin can leave comments on posts to start or participate in conversations.
 
 ![AddComment](documentation/testing/add-comment.png)
+
 ![CommentViewAsVerified](documentation/testing/comment-section.png)
 
 * View Comments: 
@@ -190,6 +193,7 @@ Any Visitor or Verified User/Admin can view the number of Likes/Votes a post has
 A Visitor or Verified User/Admin can view on a designated page the post with the most Likes/Votes to see which are popular on the forum at the moment.
 
 ![MostPopularPage1](documentation/testing/most-popular-chrome.png)
+
 ![MostPopularPage2](documentation/testing/most-popular2.png)
 
 * Account Registration: 
@@ -201,6 +205,7 @@ A Visitor/Unverified User can sign up to become a community member/Verified User
 A Verified Admin to the website is the only one with access to approve comments before posting on the website, to filter out objectionable comments.
 
 ![ApproveComments1](documentation/testing/approve-comments.png)
+
 ![ApprovedComments](documentation/testing/approved-comments.png)
 
 * Deleting of created Content: 
@@ -215,20 +220,30 @@ This section shows the tests for the features of the website that are not relate
 The first navbar shows the links to the home page through the Logo and 'Home' option, the sign up to become a Verified User and the link to login as Verified User/Admin. If a User verifies through login or signup, the navbar changes its links to 'Add Post' to add content and a 'Log out' link to log out from the website. 
 The menu collapses when the screen size is 575px or lower and gets a hamburger icon that the User can click on to open the navbar.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+Normal
+![NormalVerified](documentation/testingmenu-user-chrome/.png)
+
+![NormalNonVer](documentation/testing/loggedout.png)
+
+Collapsed
+![CollVerified](documentation/testing/dim439-menu-inlogg.png)
+
+![CollNonVer](documentation/testing/dim439-menu-nolog.png)
 
 The second navbar for categories displays all the categories available on the website. When selected for the music genres categories, a drop-down function shows all the genres available. When Users select a category, they are redirected to a page whit all the posts. If there is no post available for that category, a message is displayed to the User to either login, create on themself or become a Verified User to make a post.
 The menu collapses when the screen size is 575px or lower and gets a 'Categories'-button that the User can click on to open the navbar.
 If the User is verified on the website and clicks on either the login link or signup link, they will get redirected to the 'Home' page. If they select the add post link, the User gets redirected to the 'Add Post' page.
-When Unverified Users select either the login link or signup link, they will get redirected to those pages. If they choose to click on the add post link, a message will display, letting the User know that they need to Verify themself as a registered User to add a post to that category.
+When Unverified Users select either the login link or signup link, they will get redirected to those pages. If they choose to click on the add post link, they will get redirected to the Log In page.
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+![CategoryMenu](documentation/testing/category-menu2.png)
+
+![CategoryPage](documentation/testing/categoryp.png)
+
+![LogInPage](documentation/testing/tablet-3.png)
+
+![SignUpPage](documentation/testing/tablet-4.png)
+
+![AddPostPage](documentation/testing/tablet-6.png)
 
 * SignUp/LogIn/LogOut
   * SignUp: 
@@ -237,22 +252,31 @@ When Unverified User signup, the fields for Username and Password are required t
 Note: that 'Fyll i det här fältet' means 'This field is required' in Swedish.
 
 ![TheSignUpForm](documentation/testing/signup-form.png)
+
 ![SignUp1](documentation/testing/signup-1.png)
+
 ![SignUp2](documentation/testing/signup-2.png)
+
 ![SignUp3](documentation/testing/signup-3.png)
+
 ![SignUp4](documentation/testing/signup-4.png)
 
   * LogIn: 
 The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
 ![NoUserName](documentation/testing/nousername.png)
+
 ![NoPassword](documentation/testing/nopassword.png)
+
 ![Incorrect](documentation/testing/incorrectlog.png)
+
 ![RedirectedHome](documentation/testing/stayput.png)
 
   * LogOut: 
 When a Verified User chooses to log out from the website, a message displays on the screen, asking if they are sure they want to log out or stay logged in on the website. When the User logs out, they get redirected to the 'Home' page. If a User chooses to stay logged in, they get redirected to the 'Home' page.
 ![LogOut](documentation/testing/tablet-10.png)
+
 ![LogOutHome](documentation/testing/loggedout.png)
+
 ![StayPut](documentation/testing/stayput.png)
 
 
@@ -261,7 +285,9 @@ The home page and categories pages do not have working pagination. See Unfixed B
 The pagination for 'Most Liked Post' shows no errors. After fifteen posts, a 'Next' button appears and, when selected, takes the User to the next page. If there are more pages than two, both the 'Next' and 'Back' buttons will appear on the page. If the User is on the last page, only the 'Back' button will show and take the User back to the previous page.
 
 ![Pagination1](documentation/testing/pagination1.png)
+
 ![Pagination2](documentation/testing/pagination2.png)
+
 ![Pagination3](documentation/testing/pagination3.png)
 
 * Footer with Social Media Icons
