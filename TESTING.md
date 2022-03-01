@@ -59,20 +59,47 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
   ![Safari](documentation/testing/.png)
 
 ### Responsiveness
-* For tablet view 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+Form tablet view 
+* The 'Home' view
+![TabletHome](documentation/testing/tablet-11.png)
+
+* View of multiple posts
+![TabletMultiPost](documentation/testing/tablet-1.png)
+
+* The Footer with Social Media Icons
+![TabletFooter](documentation/testing/tablet-2.png)
+
+* The Log In form
+![TabletLogIn](documentation/testing/tablet-3.png)
+
+* The Sign Up form
+![TabletSignUp](documentation/testing/tablet-4.png)
+
+* The Log Out page
+![TabletLogOut](documentation/testing/tablet-10.png)
+
+* The Category navbar
+![TabletCatNav](documentation/testing/tablet-5.png)
+
+* The Add Post view
+![TabletAddPost](documentation/testing/tablet-6.png)
+
+* The Post Detail view for Verified User
+![TabletPostDetailVerified](documentation/testing/tablet-7.png)
+
+* The Post Detail view for Unverified User
+![TabletPostDetailUnverified](documentation/testing/tablet-12.png)
+
+* The Add Comment view
+![TabletAddComment](documentation/testing/tablet-8.png)
+
+* The Most Popular Post view
+![TabletPopular](documentation/testing/tablet-9.png)
+
+* 
 ![](documentation/testing/.png)
 
-* For mobile view
+For mobile view
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
 ![](documentation/testing/.png)
