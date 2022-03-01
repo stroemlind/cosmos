@@ -29,25 +29,25 @@ No errors where found when going through the offical [Jshint validator](https://
 * Python
 The code passed through [PEP8 linter](http://pep8online.com/checkresult). The result confirmed there are no problems with the code.
 
-![PEP8](documentation/testing/.png)
-![PEP8](documentation/testing/.png)
-![PEP8](documentation/testing/.png)
+![PEP8-1](documentation/testing/.png)
+![PEP8-2](documentation/testing/.png)
+![PEP8-3](documentation/testing/.png)
 
 ### Browser Compatibility
 * Google Chrome
   * The website runs without any issues in the Google Chrome browser
 
-  ![Chrome](documentation/testing/.png)
+  ![Chrome](documentation/testing/chrome.png)
 
 * Mozilla Firefox
   * The website runs without any issues in the Mozilla Firefox browser
 
-  ![Firefox](documentation/testing/.png)
+  ![Firefox](documentation/testing/firefox.png)
 
 * Microsoft Edge
   * The website runs without any issues in the Microsoft Edge browser
 
-  ![Edge](documentation/testing/.png)
+  ![Edge](documentation/testing/edge.png)
 
 * Safari
   * The website runs without any issues in the Safari browser
@@ -82,10 +82,11 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 ![](documentation/testing/.png)
 
 ### Tested Code
-The view functions that got tested with Django testing and the result.
+The result for the testing with Django testing of the view functions.
+![](documentation/testing/test-views.png)
 
-![](documentation/testing/.png)
-![](documentation/testing/.png)
+The result for the testing with Django testing of the models.
+![](documentation/testing/test-model.png)
 
 ### Tested User Stories
 This section provides the test done to check the User Stories for this project.
