@@ -1,7 +1,78 @@
 ## Testing
+There was always a tab open for testing with the website preview through Gitpod port 8000. To check up on my code and see if it worked as I wanted. 
+I used DevTools to see how the code would respond if I added or changed properties or values with CSS or Bootstrap. I also took help from DevTools to check the responsiveness when decreasing or increasing the screen size.
+To see and test the website's performance, I used Lighthouse, which gave me an updated report to see how well my performance, accessibility, and SEO were for the website. The last test results were these:
+![Lighthouse](documentation/testing/.png)
+
+To see that the JavaScript code in the project worked without any bugs, I used the console section of DevTools to know that it rendered as it should. While working with JavaScript, I got an error message that the browser could not render the script.js file. That was because I was using the hard-code, not the Django format, and loading static at the top of the templates.
+
+Several internet browsers, like Chrome, Mozilla Firefox, Microsoft Edge, and Safari, were used during all the testing. It works on all the mentioned internet browsers and mobile devices.
+
 ### Code Validation
+* HTML
+There are no errors form the offical [W3C Validatior]()
+    ![Game-validation](documentation/testing/.png)
+
+* CSS
+There are no errors form the offical [Jigsaw validator]()
+    ![Css-validation](documentation/testing/.png)
+
+* JavaScript
+No errors where found when going through the offical [Jshint validator](https://jshint.com/).
+ * There is 1 functions in this file.
+ * Function with the largest signature take 1 arguments, while the median is 0.
+ * Largest function has 18 statements in it, while the median is 3.
+ * The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+
+    ![script.js](documentation/testing/.png)
+
 ### Browser Compatibility
+* Google Chrome
+  * The website runs without any issues in the Google Chrome browser
+
+  ![Chrome](documentation/testing/.png)
+
+* Mozilla Firefox
+  * The website runs without any issues in the Mozilla Firefox browser
+
+  ![Firefox](documentation/testing/.png)
+
+* Microsoft Edge
+  * The website runs without any issues in the Microsoft Edge browser
+
+  ![Edge](documentation/testing/.png)
+
+* Safari
+  * The website runs without any issues in the Safari browser
+
+  ![Safari](documentation/testing/.png)
+
 ### Responsiveness
+* For tablet view 
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+
+* For mobile view
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
+![](documentation/testing/.png)
 
 ### Tested Code
 The view functions that got tested with Django testing and the result.
