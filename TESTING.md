@@ -60,6 +60,52 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
   ![Safari](documentation/testing/safari.png)
 
 ### Responsiveness
+#### From Desktop view
+* The 'Home' view
+![DesktopHome](documentation/testing/desktop13.png)
+
+* View of multiple posts
+![DesktopMultiPost](documentation/testing/desktop14.png)
+
+* The Footer with Social Media Icons
+![DesktopFooter](documentation/testing/desktop16.png)
+
+* The Log In form
+![DesktopLogIn](documentation/testing/desktop3.png)
+
+* The Sign Up form
+![DesktopSignUp](documentation/testing/desktop4.png)
+
+* The Log Out page
+![DesktopLogOut](documentation/testing/desktop12.png)
+
+* The Category navbar
+![DesktopCatNav](documentation/testing/desktop1.png)
+
+* The Add Post view
+![DesktopAddPost](documentation/testing/desktop6.png)
+
+* The Post Detail view for Verified User
+![DesktopPostDetailVerified](documentation/testing/desktop8.png)
+
+* The Post Detail view for Unverified User
+![DesktopPostDetailUnverified](documentation/testing/desktop5.png)
+
+* The Add Comment view
+![DesktopAddComment](documentation/testing/desktop9.png)
+
+* The Most Popular Post view
+![DesktopPopular](documentation/testing/desktop15.png)
+
+* The Edit Post View
+![DesktopEditPost](documentation/testing/desktop10.png)
+
+* The Delete Post View
+![DesktopDeletePost](documentation/testing/desktop11.png)
+
+* The Delete Post View
+![DesktopNoPost](documentation/testing/desktop2.png)
+
 #### Form tablet view 
 * The 'Home' view
 ![TabletHome](documentation/testing/tablet-11.png)
