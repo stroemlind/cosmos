@@ -64,6 +64,10 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 * The 'Home' view
 ![DesktopHome](documentation/testing/desktop13.png)
 
+* Blurb view 
+![DesktopBlurb](documentation/testing/blurbdesk.png)
+
+
 * View of multiple posts
 ![DesktopMultiPost](documentation/testing/desktop14.png)
 
@@ -110,6 +114,10 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 * The 'Home' view
 
 ![TabletHome](documentation/testing/tablet-11.png)
+
+* Blurb view 
+
+![TabletBlurb](documentation/testing/blurbtabl.png)
 
 * View of multiple posts
 
@@ -166,6 +174,10 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 * The 'Home' view
 
 ![MobileHome](documentation/testing/mobile-7.png)
+
+* Blurb view 
+
+![MobileBlurb](documentation/testing/blurbmob.png)
 
 * Menu/Navbar view
 
