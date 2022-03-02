@@ -274,6 +274,19 @@ Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also r
   * Navigate to the Cloudinary dashboard
   * Click on 'API Environment variable' to copy the API key.
 
+* To obtain a PostgreSQL DATABASE_URL 
+  * Install the supporting libraries by typing in the command 'pip3 install dj_database_url pyscopg2'
+  * When done, type in the command `pip3 freeze --local > requirements.txt` in the terminal
+  * In the env.py file, import os. 
+  *  Setup the following environment variable: 
+      DATABASE_URL and paste in the DATABASE_URL from Heroku.
+      ```os.environ['DATABASE_URL'] = 'postgres://***************'```
+
+  * In the settings.py file, import os dj_database_url.
+    So scroll down to the DATABASES section and comment out the entire section. 
+    Below the comment out section, add in the following code: 
+    ```DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}```
+
 * Navigate to the Deploy tab and down to the section called Deployment method. 
 * Select GitHub and confirm the connection between Heroku and GitHub.
 * Search for the project's repository name on GitHub and click "connect" to link GitHub with Heroku.
