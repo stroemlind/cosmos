@@ -93,10 +93,10 @@ To add a post and start a conversation, the User must become a site Verified Use
 To signup for the site, the User must create a username and password. When that User has a registered username and password, they can log in and out from the site as they like.
 
 * Sign Up
-![TheSignUpForm](documentation/testing/signup-form.png)
+![SignUp](documentation/testing/signup-form.png)
 
 * Log In
-
+![LogIn](documentation/testing/desktop3.png)
 
 * Log Out
 ![LogOut](documentation/testing/tablet-10.png)

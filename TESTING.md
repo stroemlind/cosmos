@@ -358,7 +358,7 @@ Note: that 'Fyll i det här fältet' means 'This field is required' in Swedish.
   * LogIn: 
 The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
 
-![]()
+![LogInForm](documentation/testing/desktop3.png)
 
 ![NoUserName](documentation/testing/nousername.png)
 
