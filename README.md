@@ -178,8 +178,14 @@ A User gets to choose to add multiple categories for a post to make it more visi
 #### Better layout design for the forms
 Create better-looking forms for the login, log out and sign up page. The input fields should align with each other to get a better UX.
 
-#### Hero image
+#### The Hero image
 Make the current Hero image a carousel with posts or pictures related to new music. 
+
+#### Custom Media Queries 
+For a better UX and overall design, implementing custom Media Queries for some elements like 'Add Post' view would create a more accessible format for the eye. 
+
+#### Show Username in the Navbar/Menu
+Adding the Verified User/Admin username to the navbar would better indicate to the User if they are logged in or not. This added username could also be a link to a future Profil page. 
 
 ## Technologies Used
 These are the following technologies and packages used to develop this project:
