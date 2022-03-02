@@ -2,6 +2,8 @@
 "They say there are no sounds in space. So let's share and create some noise together with Cosmos."
 Cosmos is your number one source to go to if you want to discuss and connect with others through music.
 
+![Header](documentation/images/header.png)
+
 
 ## User Stories
 * Create Posts: As a Verified User/Admin, I can create, read, edit and delete posts about music I like and start conversations with other Users.
