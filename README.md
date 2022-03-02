@@ -52,7 +52,7 @@ Modak gives a vintage feel, which is in great contrast to the other fonts' more 
 The Icon used for like, comment and social media are from FontAwsome.
 
 ### Wireframes
-* Desktop 
+* Desktop
 ![WireframHome](documentation/wireframes/wireframe2.png)
 ![WireframePost](documentation/wireframes/wireframe7.png)
 ![WireframeLogIn](documentation/wireframes/wireframe1.png)
@@ -70,12 +70,14 @@ The Icon used for like, comment and social media are from FontAwsome.
 The site has two different navbars at the top. The first navbar holds the links to the home page, the sign up to become a Verified User/Admin, the login if you are already a Verified User/Admin, and an add-post button will show if the Verified User/Admin is active as a site User. The signup and login link will change to a logout link when the User is active on the site. 
 The menu is collapsable, so it becomes a hamburger menu when the screen size is 575px or lower.
 
-Normal
-![NormalVerified](documentation/testingmenu-user-chrome/.png)
+* Normal
+
+![NormalVerified](documentation/testing/menu-user-chrome.png)
 
 ![NormalNonVer](documentation/testing/loggedout.png)
 
-Collapsed
+* Collapsed
+
 ![CollVerified](documentation/testing/dim439-menu-inlogg.png)
 
 ![CollNonVer](documentation/testing/dim439-menu-nolog.png)
@@ -86,6 +88,7 @@ The second navbar holds the links to all the different categories that the post 
 ![CategoryMenu](documentation/testing/category-menu2.png)
 
 * Category Menu Collapse
+
 ![CollapseCategoryM](documentation/testing/mobile-14.png)
 
 ![CollapseCategoryM2](documentation/testing/mobile-15.png)
@@ -100,7 +103,7 @@ To signup for the site, the User must create a username and password. When that 
 * Log In
 ![LogIn](documentation/testing/desktop3.png)
 
-* Log Out
+* Log Out 
 ![LogOut](documentation/testing/tablet-10.png)
 
 #### View and create a post
@@ -144,12 +147,15 @@ A website User can see comments to a post and follow the conversation. If Users 
 Any visitor to the website can see how many likes a post has, but a visitor must log in as a User to like a post.
 
 * View likes
-![ViewLikes](documentation/testing/most-popular.png)
+
+![ViewLikes](documentation/testing/most-popular2.png)
 
 * Likes a post
+
 ![Like](documentation/testing/like.png)
 
 * Unlikes the post
+
 ![Unlike](documentation/testing/unlike.png)
 
 #### Editing content made
@@ -296,7 +302,7 @@ For pagination:
 * [Webnots](https://www.webnots.com/bootstrap-pagination-tutorial/)
 * [Django Projetc](https://docs.djangoproject.com/en/4.0/topics/pagination/)
 * [Ordinary Coders](https://ordinarycoders.com/blog/article/django-pagination)
-* Nafeesah Younis[GitHub](https://github.com/nafeesahyounis/django-test-blog/blob/master/blog/views.py) and post on [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1609281135242700)
+* Nafeesah Younis [GitHub](https://github.com/nafeesahyounis/django-test-blog/blob/master/blog/views.py) and post on [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1609281135242700)
 * For popular_post.html [I Think Therfore I Blog]()
 
 For the footer to stay at the bottom of every page:
