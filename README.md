@@ -377,5 +377,3 @@ Bootstrap functionalities:
 First, I would like to acknowledge my mentor Tim Nelson, who always tries to help me create a good project, and thank him for all the time and effort he gave me during this project. He provided me with information about changing some of my views from Class-Based Views to Function-Based Views. With that help, I got the function to add and edit images to post work. Tim also helped me find the Rich Text Editor and the information on installing it for this project.
 
 I would also like to acknowledge the help from the Code Institute tutors Ed, Scott, and Jo. They gave me significant input on how to approach debugging my code in another way, helping me understand how to develop my code and how some of the implemented function works. 
-
-#### Reflections
