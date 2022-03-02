@@ -98,13 +98,17 @@ To add a post and start a conversation, the User must become a site Verified Use
 To signup for the site, the User must create a username and password. When that User has a registered username and password, they can log in and out from the site as they like.
 
 * Sign Up
+
 ![SignUp](documentation/testing/signup-form.png)
 
 * Log In
+
 ![LogIn](documentation/testing/desktop3.png)
 
-* Log Out 
+* Log Out
+
 ![LogOut](documentation/testing/tablet-10.png)
+
 
 #### View and create a post
 A visitor to the website can view all the posts made on the site. To add a post of their own, they must be a Verified User/Admin. When creating a post, the User has to give it a title, choose a category, and write the desired content. The User can also upload a picture with the post.
