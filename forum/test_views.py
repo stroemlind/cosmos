@@ -26,7 +26,6 @@ class TestViews(TestCase):
             content='test text body',
             created_on='2022.02.27',
             status=1,
-            # likes=likes.set(True)
             )
 
     def test_get_home_page(self):
