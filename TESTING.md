@@ -240,7 +240,9 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 ![NoPost](documentation/testing/mobile-6.png)
 
 ### Tested Code
-The test codes from test_models.py:
+This section go through the Django testing done to the project code.
+
+#### The test codes from test_models.py:
 ```python
 <from django.test import TestCase
 from django.contrib.auth.models import User
@@ -350,7 +352,7 @@ class TestCategoryModel(TestCase):
 >
 ```
 
-The test code from test_views.py:
+#### The test code from test_views.py:
 ```python
 <from django.test import TestCase
 from django.contrib.auth.models import User
