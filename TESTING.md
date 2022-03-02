@@ -108,52 +108,67 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 
 #### Form tablet view 
 * The 'Home' view
+
 ![TabletHome](documentation/testing/tablet-11.png)
 
 * View of multiple posts
+
 ![TabletMultiPost](documentation/testing/tablet-1.png)
 
 * The Footer with Social Media Icons
+
 ![TabletFooter](documentation/testing/tablet-2.png)
 
 * The Log In form
+
 ![TabletLogIn](documentation/testing/tablet-3.png)
 
 * The Sign Up form
+
 ![TabletSignUp](documentation/testing/tablet-4.png)
 
 * The Log Out page
+
 ![TabletLogOut](documentation/testing/tablet-10.png)
 
 * The Category navbar
+
 ![TabletCatNav](documentation/testing/tablet-5.png)
 
 * The Add Post view
 ![TabletAddPost](documentation/testing/tablet-6.png)
 
 * The Post Detail view for Verified User
+
 ![TabletPostDetailVerified](documentation/testing/tablet-7.png)
 
 * The Post Detail view for Unverified User
+
 ![TabletPostDetailUnverified](documentation/testing/tablet-12.png)
 
 * The Add Comment view
+
 ![TabletAddComment](documentation/testing/tablet-8.png)
 
 * The Most Popular Post view
+
 ![TabletPopular](documentation/testing/tablet-9.png)
 
 * The Edit Post View
+
 ![TabletEditPost](documentation/testing/tablet-14.png)
 
 * The Delete Post View
+
 ![TabletDeletePost](documentation/testing/tablet-15.png)
 
 #### Form mobile view
 * The 'Home' view
+
 ![MobileHome](documentation/testing/mobile-7.png)
 
 * Menu/Navbar view
+
 ![MobileNav1](documentation/testing/dim439-menu-nolog.png)
 
 ![MobileNav2](documentation/testing/dim439-menu-inlogg.png)
@@ -163,48 +178,62 @@ The code passed through [PEP8 linter](http://pep8online.com/checkresult). The re
 ![MobileNav4](documentation/testing/mobile-15.png)
 
 * The Log In view
+
 ![MobileLogIn](documentation/testing/mobile-4.png)
 
 * The Log Out view
+
 ![MobileLogOut](documentation/testing/mobile-13.png)
 
 * The Sign Up view
+
 ![MobileSignUp](documentation/testing/mobile-5.png)
 
 * The Add Post view 
+
 ![MobileAddPost](documentation/testing/mobile-9.png)
 
 * Post Detail View
+
 ![MobileUnverifiedUser](documentation/testing/mobile-1.png)
 
 ![MobileVerifiedUser](documentation/testing/mobile-10.png)
 
 * Edit Post view
+
 ![MobileEditPost](documentation/testing/mobile-11.png)
 
 * Delete Post view
+
 ![MobileDeletePost](documentation/testing/mobile-12.png)
 
 * Add Comment view
+
 ![MobileAddComment](documentation/testing/mobile-16.png)
 
 * Comments view
+
 ![MobileComments](documentation/testing/mobile-8.png)
 
 * Most Popular Post view
+
 ![MobilePopular](documentation/testing/mobile-2.png)
 
 * Footer and Pagination
+
 ![MobileFooter](documentation/testing/mobile-3.png)
 
 * No Post yet view 
+
 ![NoPost](documentation/testing/mobile-6.png)
 
 ### Tested Code
 The result for the testing with Django testing of the view functions.
+
 ![TestViews](documentation/testing/test-views.png)
 
 The result for the testing with Django testing of the models.
+
 ![TestModel](documentation/testing/test-model.png)
 
 ### Tested User Stories
@@ -216,32 +245,40 @@ An Unverified User/Visitor can only read posts.
 
   * Verified User/Admin:
   Read post with and without comments
+
   ![ReadPost1](documentation/testing/post-detail-chrome.png)
 
   ![ReadPost2](documentation/testing/postview-comment-chrome.png)
 
   Create post form
+
   ![CreatePost](documentation/testing/post-form.png)
 
   Edit post form
+
   ![EditPost](documentation/testing/edit-postform.png)
 
   Delete post form
+
   ![DeletePost](documentation/testing/tablet-13.png)
 
   * Unverified User:
   Read post with and without comments
+
   ![ReadPost3](documentation/testing/not-user-post.png)
 
   ![ReadPost4](documentation/testing/un-comments.png)
 
   Add post: The User gets redirected to the Log In page
+
   ![AddPost2](documentation/testing/tablet-3.png)
 
   Edit post
+
   ![EditPost2](documentation/testing/no-edit.png)
 
   Delete post
+
   ![DeletePost3](documentation/testing/no-delete.png)
 
 * Choose Category & Categories: 
@@ -271,7 +308,7 @@ A Verified User/Admin can Like/Vote and Unlike the like on a post to show their 
 * View Likes: 
 Any Visitor or Verified User/Admin can view the number of Likes/Votes a post has.
 
-![ViewLikes](documentation/testing/most-popular.png)
+![ViewLikes](documentation/testing/most-popular2.png)
 
 * View popular posts: 
 A Visitor or Verified User/Admin can view on a designated page the post with the most Likes/Votes to see which are popular on the forum at the moment.
@@ -304,15 +341,17 @@ This section shows the tests for the features of the website that are not relate
 The first navbar shows the links to the home page through the Logo and 'Home' option, the sign up to become a Verified User and the link to login as Verified User/Admin. If a User verifies through login or signup, the navbar changes its links to 'Add Post' to add content and a 'Log out' link to log out from the website. 
 The menu collapses when the screen size is 575px or lower and gets a hamburger icon that the User can click on to open the navbar.
 
-Normal
-![NormalVerified](documentation/testingmenu-user-chrome/.png)
+  * Normal: 
+  
+  ![NormalVerified](documentation/testing/menu-user-chrome.png)
+  
+  ![NormalNonVer](documentation/testing/loggedout.png)
 
-![NormalNonVer](documentation/testing/loggedout.png)
-
-Collapsed
-![CollVerified](documentation/testing/dim439-menu-inlogg.png)
-
-![CollNonVer](documentation/testing/dim439-menu-nolog.png)
+  * Collapsed:
+  
+  ![CollVerified](documentation/testing/dim439-menu-inlogg.png)
+  
+  ![CollNonVer](documentation/testing/dim439-menu-nolog.png)
 
 The second navbar for categories displays all the categories available on the website. When selected for the music genres categories, a drop-down function shows all the genres available. When Users select a category, they are redirected to a page whit all the posts. If there is no post available for that category, a message is displayed to the User to either login, create on themself or become a Verified User to make a post.
 The menu collapses when the screen size is 575px or lower and gets a 'Categories'-button that the User can click on to open the navbar.
@@ -320,23 +359,29 @@ If the User is verified on the website and clicks on either the login link or si
 When Unverified Users select either the login link or signup link, they will get redirected to those pages. If they choose to click on the add post link, they will get redirected to the Log In page.
 
 * Category Menu Normal
+
 ![CategoryMenu](documentation/testing/category-menu2.png)
 
-* Category Menu Collapse
+* Category Menu Collapse 
+
 ![CollapseCategoryM](documentation/testing/mobile-14.png)
 
 ![CollapseCategoryM2](documentation/testing/mobile-15.png)
 
 * A Category page
+
 ![CategoryPage](documentation/testing/categoryp.png)
 
 * Redirect to Log In page
+
 ![LogInPage](documentation/testing/tablet-3.png)
 
 * Redirect to Sign Up page
+
 ![SignUpPage](documentation/testing/tablet-4.png)
 
 * Redirect to Add Post page
+
 ![AddPostPage](documentation/testing/tablet-6.png)
 
 * SignUp/LogIn/LogOut
@@ -358,6 +403,7 @@ Note: that 'Fyll i det här fältet' means 'This field is required' in Swedish.
   * LogIn: 
 The login form requires a valid username and password to log in to the website. If the required fields are not populated or username and password do not match, a notification will show above the input fields, telling the User what the error is. When the form requirements are correct, the User gets redirected to the 'Home' page.
 
+
 ![LogInForm](documentation/testing/desktop3.png)
 
 ![NoUserName](documentation/testing/nousername.png)
@@ -370,6 +416,7 @@ The login form requires a valid username and password to log in to the website. 
 
   * LogOut: 
 When a Verified User chooses to log out from the website, a message displays on the screen, asking if they are sure they want to log out or stay logged in on the website. When the User logs out, they get redirected to the 'Home' page. If a User chooses to stay logged in, they get redirected to the 'Home' page.
+
 ![LogOut](documentation/testing/tablet-10.png)
 
 ![LogOutHome](documentation/testing/loggedout.png)
@@ -390,21 +437,29 @@ The pagination for 'Most Liked Post' shows no errors. After fifteen posts, a 'Ne
 The Social Media Icons in the footer takes the User to that icon's Social Media home page and opens up in a new tab. 
 If a User clicks on the Logo below the Social Media Icons, they get redirected to the Cosmos home page.
 
-![Footer](documentation/testing/footer.png)
+  * The Footer
+  ![Footer](documentation/testing/footer.png)
 
-![WindowWithTabs](documentation/testing/socialmtab.png)
+  * The view to confirm links open in new tab
+  ![WindowWithTabs](documentation/testing/socialmtab.png)
 
-![Spotify](documentation/testing/spotify.png)
-
-![Facebook](documentation/testing/facebook.png)
-
-![Twitter](documentation/testing/twitter.png)
-
-![Instagram](documentation/testing/instagram.png)
-
-![SoundCloud](documentation/testing/soundc.png)
-
-![Youtube](documentation/testing/youtube.png)
+  * Spotify redirect link
+  ![Spotify](documentation/testing/spotify.png)
+  
+  * Facebook redirect link
+  ![Facebook](documentation/testing/facebook.png)
+  
+  * Twitter redirect link
+  ![Twitter](documentation/testing/twitter.png)
+  
+  * Instagarm redirect link
+  ![Instagram](documentation/testing/instagram.png)
+  
+  * SoundCloud redirect link
+  ![SoundCloud](documentation/testing/soundc.png)
+  
+  * Youtube redirect link
+  ![Youtube](documentation/testing/youtube.png)
 
 ### Unfixed Bugs
 * Pagination
