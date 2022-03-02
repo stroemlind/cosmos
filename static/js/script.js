@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 const titleInput = document.querySelector('input[name=title]');
 const slugInput = document.querySelector('input[name=slug]');
 
