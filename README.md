@@ -182,7 +182,7 @@ Create better-looking forms for the login, log out and sign up page. The input f
 Make the current Hero image a carousel with posts or pictures related to new music. 
 
 #### Custom Media Queries 
-For a better UX and overall design, implementing custom Media Queries for some elements like 'Add Post' view would create a more accessible format for the eye. 
+For a better UX and overall design, implementing custom Media Queries for elements like 'Add Post' would create a more accessible format for the eye. 
 
 #### Show Username in the Navbar/Menu
 Adding the Verified User/Admin username to the navbar would better indicate to the User if they are logged in or not. This added username could also be a link to a future Profil page. 
@@ -287,7 +287,7 @@ For integrating and installing TinyMCE text editor:
 * [TinyMCE](https://www.tiny.cloud/docs/quick-start/)
 * [TinmyMCE Django](https://www.tiny.cloud/docs/integrations/django/)
 
-For footer design:
+For the footer design:
 * [MdBootstrap](https://mdbootstrap.com/docs/standard/navigation/footer/)
 
 For pagination:
@@ -295,23 +295,24 @@ For pagination:
 * [Django Projetc](https://docs.djangoproject.com/en/4.0/topics/pagination/)
 * [Ordinary Coders](https://ordinarycoders.com/blog/article/django-pagination)
 * Nafeesah Younis[GitHub](https://github.com/nafeesahyounis/django-test-blog/blob/master/blog/views.py) and post on [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1609281135242700)
+* For popular_post.html [I Think Therfore I Blog]()
 
-For footer:
+For the footer to stay at the bottom of every page:
 * [Stackoverflow](https://stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page)
 
-Populate Slugfiled in add_post.html form
+Populate Slugfiled in add_post.html and edit_post.html form:
 * [The Net Ninja](https://www.youtube.com/watch?v=qO1bgMG7sO8)
 
-Like-button 
+Like-button code and functionalities:
 * [Dev.to](https://dev.to/radualexandrub/how-to-add-like-unlike-button-to-your-django-blog-5gkg)
 * [I think therefor I blog]()
 
-For Comments:
+For the Comment section, to Add and Display on page:
 * [Django Central](https://djangocentral.com/creating-comments-system-with-django/)
 * [Data-Flair](https://data-flair.training/blogs/discussion-forum-python-django/)
 * Tutor Ed from Code Institute
 
-For Most liked page:
+For displaying Most liked posts on a page:
 * [Stackoweflow](https://stackoverflow.com/questions/65944103/django-order-by-highest-number-of-likes-in-homepage)
 
 Category navbar: 
@@ -339,3 +340,8 @@ Bootstrap functionalities:
  * [ColorGenerator](https://coolors.co/fcfbff-03010e-0a042a-1e164b-ffffff)
 
 ### Acknowledgements
+First, I would like to acknowledge my mentor Tim Nelson, who always tries to help me create a good project, and thank him for all the time and effort he gave me during this project. He provided me with information about changing some of my views from Class-Based Views to Function-Based Views. With that help, I got the function to add and edit images to post work. Tim also helped me find the Rich Text Editor and the information on installing it for this project.
+
+I would also like to acknowledge the help from the Code Institute tutors Ed, Scott, and Jo. They gave me significant input on how to approach debugging my code in another way, helping me understand how to develop my code and how some of the implemented function works. 
+
+#### Reflections
