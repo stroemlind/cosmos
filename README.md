@@ -263,7 +263,16 @@ The site was deployed to Heroku. The steps to deploy are as follows:
   * Set the key to `DEBUG`, value to `True`, and click add. 
   * Set the key to `DISABLE_COLLECTSTATIC`, value to `1`, and click add. 
 
-Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment.
+Note: Remove DEBUG and DISABLE_COLLECTSTATIC before the final deployment. Also remember to have the env.py file in the **.gitignore** file before the first deployment. So no value information will be visible after deplyment.
+
+* To obtain a Cloudinary API key, go to the [Cloudinary](https://cloudinary.com/) site signup up for free by clicking on the Sign Up For Free button. Follow these steps to set up the account:
+  * Provide name, email and choose a password
+  * For Primary interest, choose Programmable Media for image and video API
+  * Change the assigned cloud name to something memorable 
+  * Click Create Account
+  * Verify your email, and the service is ready to use
+  * Navigate to the Cloudinary dashboard
+  * Click on 'API Environment variable' to copy the API key.
 
 * Navigate to the Deploy tab and down to the section called Deployment method. 
 * Select GitHub and confirm the connection between Heroku and GitHub.
